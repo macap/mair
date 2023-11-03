@@ -1,0 +1,1664 @@
+{
+  "arrivalAirportCategories": null,
+  "fares": [
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Italy",
+          "iataCode": "BRI",
+          "name": "Bari",
+          "seoName": "bari",
+          "city": {
+            "name": "Bari",
+            "code": "BARI",
+            "countryCode": "it"
+          }
+        },
+        "departureDate": "2023-11-11T17:40:00",
+        "arrivalDate": "2023-11-11T19:00:00",
+        "price": {
+          "value": 14.99,
+          "valueMainUnit": "14",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~7108~ ~~MLA~11/11/2023 17:40~BRI~11/11/2023 19:00~~",
+        "flightNumber": "FR7108",
+        "previousPrice": null,
+        "priceUpdated": 1698929255000
+      },
+      "summary": {
+        "price": {
+          "value": 14.99,
+          "valueMainUnit": "14",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Italy",
+          "iataCode": "CTA",
+          "name": "Catania",
+          "seoName": "catania",
+          "city": {
+            "name": "Catania",
+            "code": "CATANIA",
+            "countryCode": "it"
+          }
+        },
+        "departureDate": "2023-11-11T15:45:00",
+        "arrivalDate": "2023-11-11T16:35:00",
+        "price": {
+          "value": 14.99,
+          "valueMainUnit": "14",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~ 395~ ~~MLA~11/11/2023 15:45~CTA~11/11/2023 16:35~~",
+        "flightNumber": "FR395",
+        "previousPrice": null,
+        "priceUpdated": 1698917541000
+      },
+      "summary": {
+        "price": {
+          "value": 14.99,
+          "valueMainUnit": "14",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Italy",
+          "iataCode": "BLQ",
+          "name": "Bologna",
+          "seoName": "bologna",
+          "city": {
+            "name": "Bologna",
+            "code": "BOLOGNA",
+            "countryCode": "it"
+          }
+        },
+        "departureDate": "2023-11-11T13:55:00",
+        "arrivalDate": "2023-11-11T15:45:00",
+        "price": {
+          "value": 20.96,
+          "valueMainUnit": "20",
+          "valueFractionalUnit": "96",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~3779~ ~~MLA~11/11/2023 13:55~BLQ~11/11/2023 15:45~~",
+        "flightNumber": "FR3779",
+        "previousPrice": null,
+        "priceUpdated": 1698906548000
+      },
+      "summary": {
+        "price": {
+          "value": 20.96,
+          "valueMainUnit": "20",
+          "valueFractionalUnit": "96",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Bulgaria",
+          "iataCode": "SOF",
+          "name": "Sofia",
+          "seoName": "sofia",
+          "city": {
+            "name": "Sofia",
+            "code": "SOFIA",
+            "countryCode": "bg"
+          }
+        },
+        "departureDate": "2023-11-11T20:50:00",
+        "arrivalDate": "2023-11-11T23:40:00",
+        "price": {
+          "value": 23.17,
+          "valueMainUnit": "23",
+          "valueFractionalUnit": "17",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~8066~ ~~MLA~11/11/2023 20:50~SOF~11/11/2023 23:40~~",
+        "flightNumber": "FR8066",
+        "previousPrice": null,
+        "priceUpdated": 1698908975000
+      },
+      "summary": {
+        "price": {
+          "value": 23.17,
+          "valueMainUnit": "23",
+          "valueFractionalUnit": "17",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Spain",
+          "iataCode": "BCN",
+          "name": "Barcelona",
+          "seoName": "barcelona-el-prat",
+          "city": {
+            "name": "Barcelona",
+            "code": "BARCELONA",
+            "macCode": "BAR",
+            "countryCode": "es"
+          }
+        },
+        "departureDate": "2023-11-11T18:50:00",
+        "arrivalDate": "2023-11-11T21:05:00",
+        "price": {
+          "value": 24.11,
+          "valueMainUnit": "24",
+          "valueFractionalUnit": "11",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~1526~ ~~MLA~11/11/2023 18:50~BCN~11/11/2023 21:05~~",
+        "flightNumber": "FR1526",
+        "previousPrice": null,
+        "priceUpdated": 1698928590000
+      },
+      "summary": {
+        "price": {
+          "value": 24.11,
+          "valueMainUnit": "24",
+          "valueFractionalUnit": "11",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Greece",
+          "iataCode": "SKG",
+          "name": "Thessaloniki",
+          "seoName": "thessaloniki",
+          "city": {
+            "name": "Thessaloniki",
+            "code": "THESSALONIKI",
+            "countryCode": "gr"
+          }
+        },
+        "departureDate": "2023-11-11T07:45:00",
+        "arrivalDate": "2023-11-11T10:20:00",
+        "price": {
+          "value": 24.11,
+          "valueMainUnit": "24",
+          "valueFractionalUnit": "11",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~7131~ ~~MLA~11/11/2023 07:45~SKG~11/11/2023 10:20~~",
+        "flightNumber": "FR7131",
+        "previousPrice": null,
+        "priceUpdated": 1698907527000
+      },
+      "summary": {
+        "price": {
+          "value": 24.11,
+          "valueMainUnit": "24",
+          "valueFractionalUnit": "11",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Israel",
+          "iataCode": "TLV",
+          "name": "Tel Aviv",
+          "seoName": "tel-aviv",
+          "city": {
+            "name": "Tel Aviv",
+            "code": "TEL_AVIV",
+            "countryCode": "il"
+          }
+        },
+        "departureDate": "2023-11-11T05:50:00",
+        "arrivalDate": "2023-11-11T09:45:00",
+        "price": {
+          "value": 25.86,
+          "valueMainUnit": "25",
+          "valueFractionalUnit": "86",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~ 761~ ~~MLA~11/11/2023 05:50~TLV~11/11/2023 09:45~~",
+        "flightNumber": "FR761",
+        "previousPrice": null,
+        "priceUpdated": 1698908000000
+      },
+      "summary": {
+        "price": {
+          "value": 25.86,
+          "valueMainUnit": "25",
+          "valueFractionalUnit": "86",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Italy",
+          "iataCode": "CIA",
+          "name": "Rome Ciampino",
+          "seoName": "rome-ciampino",
+          "city": {
+            "name": "Rome",
+            "code": "ROME",
+            "macCode": "ROM",
+            "countryCode": "it"
+          }
+        },
+        "departureDate": "2023-11-11T13:45:00",
+        "arrivalDate": "2023-11-11T15:15:00",
+        "price": {
+          "value": 35.27,
+          "valueMainUnit": "35",
+          "valueFractionalUnit": "27",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~5587~ ~~MLA~11/11/2023 13:45~CIA~11/11/2023 15:15~~",
+        "flightNumber": "FR5587",
+        "previousPrice": null,
+        "priceUpdated": 1698922355000
+      },
+      "summary": {
+        "price": {
+          "value": 35.27,
+          "valueMainUnit": "35",
+          "valueFractionalUnit": "27",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Italy",
+          "iataCode": "MXP",
+          "name": "Milan Malpensa",
+          "seoName": "milan-malpensa",
+          "city": {
+            "name": "Milan",
+            "code": "MILAN",
+            "macCode": "MIL",
+            "countryCode": "it"
+          }
+        },
+        "departureDate": "2023-11-11T13:25:00",
+        "arrivalDate": "2023-11-11T15:30:00",
+        "price": {
+          "value": 38.24,
+          "valueMainUnit": "38",
+          "valueFractionalUnit": "24",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~5971~ ~~MLA~11/11/2023 13:25~MXP~11/11/2023 15:30~~",
+        "flightNumber": "FR5971",
+        "previousPrice": null,
+        "priceUpdated": 1698926171000
+      },
+      "summary": {
+        "price": {
+          "value": 38.24,
+          "valueMainUnit": "38",
+          "valueFractionalUnit": "24",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "France",
+          "iataCode": "TLS",
+          "name": "Toulouse",
+          "seoName": "toulouse",
+          "city": {
+            "name": "Toulouse",
+            "code": "TOULOUSE",
+            "countryCode": "fr"
+          }
+        },
+        "departureDate": "2023-11-11T18:20:00",
+        "arrivalDate": "2023-11-11T20:45:00",
+        "price": {
+          "value": 40.34,
+          "valueMainUnit": "40",
+          "valueFractionalUnit": "34",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~3044~ ~~MLA~11/11/2023 18:20~TLS~11/11/2023 20:45~~",
+        "flightNumber": "FR3044",
+        "previousPrice": null,
+        "priceUpdated": 1698914032000
+      },
+      "summary": {
+        "price": {
+          "value": 40.34,
+          "valueMainUnit": "40",
+          "valueFractionalUnit": "34",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Greece",
+          "iataCode": "ATH",
+          "name": "Athens",
+          "seoName": "athens",
+          "city": {
+            "name": "Athens",
+            "code": "ATHENS",
+            "countryCode": "gr"
+          }
+        },
+        "departureDate": "2023-11-11T11:00:00",
+        "arrivalDate": "2023-11-11T13:40:00",
+        "price": {
+          "value": 41.33,
+          "valueMainUnit": "41",
+          "valueFractionalUnit": "33",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~6029~ ~~MLA~11/11/2023 11:00~ATH~11/11/2023 13:40~~",
+        "flightNumber": "FR6029",
+        "previousPrice": null,
+        "priceUpdated": 1698929281000
+      },
+      "summary": {
+        "price": {
+          "value": 41.33,
+          "valueMainUnit": "41",
+          "valueFractionalUnit": "33",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Serbia",
+          "iataCode": "INI",
+          "name": "Nis",
+          "seoName": "nis",
+          "city": {
+            "name": "Nis",
+            "code": "NIS",
+            "countryCode": "rs"
+          }
+        },
+        "departureDate": "2023-11-11T14:45:00",
+        "arrivalDate": "2023-11-11T16:40:00",
+        "price": {
+          "value": 41.37,
+          "valueMainUnit": "41",
+          "valueFractionalUnit": "37",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~5582~ ~~MLA~11/11/2023 14:45~INI~11/11/2023 16:40~~",
+        "flightNumber": "FR5582",
+        "previousPrice": null,
+        "priceUpdated": 1698924790000
+      },
+      "summary": {
+        "price": {
+          "value": 41.37,
+          "valueMainUnit": "41",
+          "valueFractionalUnit": "37",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "United Kingdom",
+          "iataCode": "EDI",
+          "name": "Edinburgh",
+          "seoName": "edinburgh",
+          "city": {
+            "name": "Edinburgh",
+            "code": "EDINBURGH",
+            "countryCode": "gb"
+          }
+        },
+        "departureDate": "2023-11-11T20:05:00",
+        "arrivalDate": "2023-11-11T23:00:00",
+        "price": {
+          "value": 48.95,
+          "valueMainUnit": "48",
+          "valueFractionalUnit": "95",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~6702~ ~~MLA~11/11/2023 20:05~EDI~11/11/2023 23:00~~",
+        "flightNumber": "FR6702",
+        "previousPrice": null,
+        "priceUpdated": 1698928390000
+      },
+      "summary": {
+        "price": {
+          "value": 48.95,
+          "valueMainUnit": "48",
+          "valueFractionalUnit": "95",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Italy",
+          "iataCode": "TSF",
+          "name": "Venice Treviso",
+          "seoName": "venice-treviso",
+          "city": {
+            "name": "Venice",
+            "code": "VENICE",
+            "macCode": "VEN",
+            "countryCode": "it"
+          }
+        },
+        "departureDate": "2023-11-11T14:05:00",
+        "arrivalDate": "2023-11-11T16:00:00",
+        "price": {
+          "value": 60.24,
+          "valueMainUnit": "60",
+          "valueFractionalUnit": "24",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~3871~ ~~MLA~11/11/2023 14:05~TSF~11/11/2023 16:00~~",
+        "flightNumber": "FR3871",
+        "previousPrice": null,
+        "priceUpdated": 1698928756000
+      },
+      "summary": {
+        "price": {
+          "value": 60.24,
+          "valueMainUnit": "60",
+          "valueFractionalUnit": "24",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Italy",
+          "iataCode": "PSA",
+          "name": "Pisa",
+          "seoName": "pisa",
+          "city": {
+            "name": "Pisa",
+            "code": "PISA",
+            "countryCode": "it"
+          }
+        },
+        "departureDate": "2023-11-11T13:40:00",
+        "arrivalDate": "2023-11-11T15:20:00",
+        "price": {
+          "value": 62.22,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "22",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~9993~ ~~MLA~11/11/2023 13:40~PSA~11/11/2023 15:20~~",
+        "flightNumber": "FR9993",
+        "previousPrice": null,
+        "priceUpdated": 1698917472000
+      },
+      "summary": {
+        "price": {
+          "value": 62.22,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "22",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Romania",
+          "iataCode": "OTP",
+          "name": "Bucharest",
+          "seoName": "Bucharest-Otopeni",
+          "city": {
+            "name": "Bucharest",
+            "code": "BUCHAREST",
+            "countryCode": "ro"
+          }
+        },
+        "departureDate": "2023-11-11T19:20:00",
+        "arrivalDate": "2023-11-11T22:35:00",
+        "price": {
+          "value": 65.37,
+          "valueMainUnit": "65",
+          "valueFractionalUnit": "37",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~9256~ ~~MLA~11/11/2023 19:20~OTP~11/11/2023 22:35~~",
+        "flightNumber": "FR9256",
+        "previousPrice": null,
+        "priceUpdated": 1698928106000
+      },
+      "summary": {
+        "price": {
+          "value": 65.37,
+          "valueMainUnit": "65",
+          "valueFractionalUnit": "37",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "United Kingdom",
+          "iataCode": "LTN",
+          "name": "London Luton",
+          "seoName": "london-luton",
+          "city": {
+            "name": "London",
+            "code": "LONDON",
+            "macCode": "LON",
+            "countryCode": "gb"
+          }
+        },
+        "departureDate": "2023-11-11T10:40:00",
+        "arrivalDate": "2023-11-11T13:10:00",
+        "price": {
+          "value": 82.39,
+          "valueMainUnit": "82",
+          "valueFractionalUnit": "39",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~3883~ ~~MLA~11/11/2023 10:40~LTN~11/11/2023 13:10~~",
+        "flightNumber": "FR3883",
+        "previousPrice": null,
+        "priceUpdated": 1698908971000
+      },
+      "summary": {
+        "price": {
+          "value": 82.39,
+          "valueMainUnit": "82",
+          "valueFractionalUnit": "39",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Germany",
+          "iataCode": "FMM",
+          "name": "Memmingen",
+          "seoName": "munich-memmingen",
+          "city": {
+            "name": "Memmingen",
+            "code": "MEMMINGEN",
+            "countryCode": "de"
+          }
+        },
+        "departureDate": "2023-11-11T05:45:00",
+        "arrivalDate": "2023-11-11T07:50:00",
+        "price": {
+          "value": 87.99,
+          "valueMainUnit": "87",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~9535~ ~~MLA~11/11/2023 05:45~FMM~11/11/2023 07:50~~",
+        "flightNumber": "FR9535",
+        "previousPrice": null,
+        "priceUpdated": 1698923933000
+      },
+      "summary": {
+        "price": {
+          "value": 87.99,
+          "valueMainUnit": "87",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": true
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "United Kingdom",
+          "iataCode": "STN",
+          "name": "London Stansted",
+          "seoName": "london-stansted",
+          "city": {
+            "name": "London",
+            "code": "LONDON",
+            "macCode": "LON",
+            "countryCode": "gb"
+          }
+        },
+        "departureDate": "2023-11-11T05:45:00",
+        "arrivalDate": "2023-11-11T08:15:00",
+        "price": {
+          "value": 97.35,
+          "valueMainUnit": "97",
+          "valueFractionalUnit": "35",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~4207~ ~~MLA~11/11/2023 05:45~STN~11/11/2023 08:15~~",
+        "flightNumber": "FR4207",
+        "previousPrice": null,
+        "priceUpdated": 1698928880000
+      },
+      "summary": {
+        "price": {
+          "value": 97.35,
+          "valueMainUnit": "97",
+          "valueFractionalUnit": "35",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "United Kingdom",
+          "iataCode": "EMA",
+          "name": "East Midlands",
+          "seoName": "east-midlands",
+          "city": {
+            "name": "East Midlands",
+            "code": "EAST_MIDLANDS",
+            "countryCode": "gb"
+          }
+        },
+        "departureDate": "2023-11-11T10:35:00",
+        "arrivalDate": "2023-11-11T13:05:00",
+        "price": {
+          "value": 115.79,
+          "valueMainUnit": "115",
+          "valueFractionalUnit": "79",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~1691~ ~~MLA~11/11/2023 10:35~EMA~11/11/2023 13:05~~",
+        "flightNumber": "FR1691",
+        "previousPrice": null,
+        "priceUpdated": 1698906695000
+      },
+      "summary": {
+        "price": {
+          "value": 115.79,
+          "valueMainUnit": "115",
+          "valueFractionalUnit": "79",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "United Kingdom",
+          "iataCode": "MAN",
+          "name": "Manchester",
+          "seoName": "manchester",
+          "city": {
+            "name": "Manchester",
+            "code": "MANCHESTER",
+            "countryCode": "gb"
+          }
+        },
+        "departureDate": "2023-11-11T21:05:00",
+        "arrivalDate": "2023-11-11T23:45:00",
+        "price": {
+          "value": 116.57,
+          "valueMainUnit": "116",
+          "valueFractionalUnit": "57",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~5210~ ~~MLA~11/11/2023 21:05~MAN~11/11/2023 23:45~~",
+        "flightNumber": "FR5210",
+        "previousPrice": null,
+        "priceUpdated": 1698907152000
+      },
+      "summary": {
+        "price": {
+          "value": 116.57,
+          "valueMainUnit": "116",
+          "valueFractionalUnit": "57",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Lithuania",
+          "iataCode": "VNO",
+          "name": "Vilnius",
+          "seoName": "vilnius",
+          "city": {
+            "name": "Vilnius",
+            "code": "VILNIUS",
+            "countryCode": "lt"
+          }
+        },
+        "departureDate": "2023-11-11T05:55:00",
+        "arrivalDate": "2023-11-11T10:20:00",
+        "price": {
+          "value": 135.04,
+          "valueMainUnit": "135",
+          "valueFractionalUnit": "04",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~7203~ ~~MLA~11/11/2023 05:55~VNO~11/11/2023 10:20~~",
+        "flightNumber": "FR7203",
+        "previousPrice": null,
+        "priceUpdated": 1698906437000
+      },
+      "summary": {
+        "price": {
+          "value": 135.04,
+          "valueMainUnit": "135",
+          "valueFractionalUnit": "04",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Poland",
+          "iataCode": "WRO",
+          "name": "Wroclaw",
+          "seoName": "wroclaw",
+          "city": {
+            "name": "Wroclaw",
+            "code": "WROCLAW",
+            "countryCode": "pl"
+          }
+        },
+        "departureDate": "2023-11-11T09:35:00",
+        "arrivalDate": "2023-11-11T12:20:00",
+        "price": {
+          "value": 150.58,
+          "valueMainUnit": "150",
+          "valueFractionalUnit": "58",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~3462~ ~~MLA~11/11/2023 09:35~WRO~11/11/2023 12:20~~",
+        "flightNumber": "FR3462",
+        "previousPrice": null,
+        "priceUpdated": 1698908979000
+      },
+      "summary": {
+        "price": {
+          "value": 150.58,
+          "valueMainUnit": "150",
+          "valueFractionalUnit": "58",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Poland",
+          "iataCode": "KRK",
+          "name": "Krakow",
+          "seoName": "krakow",
+          "city": {
+            "name": "Krakow",
+            "code": "KRAKOW",
+            "countryCode": "pl"
+          }
+        },
+        "departureDate": "2023-11-11T13:55:00",
+        "arrivalDate": "2023-11-11T16:35:00",
+        "price": {
+          "value": 150.99,
+          "valueMainUnit": "150",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~7114~ ~~MLA~11/11/2023 13:55~KRK~11/11/2023 16:35~~",
+        "flightNumber": "FR7114",
+        "previousPrice": null,
+        "priceUpdated": 1698925146000
+      },
+      "summary": {
+        "price": {
+          "value": 150.99,
+          "valueMainUnit": "150",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Poland",
+          "iataCode": "WMI",
+          "name": "Warsaw Modlin",
+          "seoName": "warsaw-modlin",
+          "city": {
+            "name": "Warsaw",
+            "code": "WARSAW",
+            "macCode": "WWA",
+            "countryCode": "pl"
+          }
+        },
+        "departureDate": "2023-11-11T09:25:00",
+        "arrivalDate": "2023-11-11T12:20:00",
+        "price": {
+          "value": 185.75,
+          "valueMainUnit": "185",
+          "valueFractionalUnit": "75",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~9258~ ~~MLA~11/11/2023 09:25~WMI~11/11/2023 12:20~~",
+        "flightNumber": "FR9258",
+        "previousPrice": null,
+        "priceUpdated": 1698908982000
+      },
+      "summary": {
+        "price": {
+          "value": 185.75,
+          "valueMainUnit": "185",
+          "valueFractionalUnit": "75",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Austria",
+          "iataCode": "VIE",
+          "name": "Vienna",
+          "seoName": "vienna",
+          "city": {
+            "name": "Vienna",
+            "code": "VIENNA",
+            "countryCode": "at"
+          }
+        },
+        "departureDate": "2023-11-11T20:05:00",
+        "arrivalDate": "2023-11-11T22:25:00",
+        "price": {
+          "value": 194.99,
+          "valueMainUnit": "194",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~1589~ ~~MLA~11/11/2023 20:05~VIE~11/11/2023 22:25~~",
+        "flightNumber": "FR1589",
+        "previousPrice": null,
+        "priceUpdated": 1698924533000
+      },
+      "summary": {
+        "price": {
+          "value": 194.99,
+          "valueMainUnit": "194",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Spain",
+          "iataCode": "MAD",
+          "name": "Madrid",
+          "seoName": "madrid",
+          "city": {
+            "name": "Madrid",
+            "code": "MADRID",
+            "countryCode": "es"
+          }
+        },
+        "departureDate": "2023-11-11T22:00:00",
+        "arrivalDate": "2023-11-12T00:55:00",
+        "price": {
+          "value": 205.12,
+          "valueMainUnit": "205",
+          "valueFractionalUnit": "12",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~5383~ ~~MLA~11/11/2023 22:00~MAD~11/12/2023 00:55~~",
+        "flightNumber": "FR5383",
+        "previousPrice": null,
+        "priceUpdated": 1698908976000
+      },
+      "summary": {
+        "price": {
+          "value": 205.12,
+          "valueMainUnit": "205",
+          "valueFractionalUnit": "12",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Latvia",
+          "iataCode": "RIX",
+          "name": "Riga",
+          "seoName": "riga",
+          "city": {
+            "name": "Riga",
+            "code": "RIGA",
+            "countryCode": "lv"
+          }
+        },
+        "departureDate": "2023-11-11T05:45:00",
+        "arrivalDate": "2023-11-11T10:25:00",
+        "price": {
+          "value": 207.24,
+          "valueMainUnit": "207",
+          "valueFractionalUnit": "24",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~9657~ ~~MLA~11/11/2023 05:45~RIX~11/11/2023 10:25~~",
+        "flightNumber": "FR9657",
+        "previousPrice": null,
+        "priceUpdated": 1698928369000
+      },
+      "summary": {
+        "price": {
+          "value": 207.24,
+          "valueMainUnit": "207",
+          "valueFractionalUnit": "24",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Portugal",
+          "iataCode": "LIS",
+          "name": "Lisbon",
+          "seoName": "lisbon",
+          "city": {
+            "name": "Lisbon",
+            "code": "LISBON",
+            "countryCode": "pt"
+          }
+        },
+        "departureDate": "2023-11-11T16:15:00",
+        "arrivalDate": "2023-11-11T18:45:00",
+        "price": {
+          "value": 229.23,
+          "valueMainUnit": "229",
+          "valueFractionalUnit": "23",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~9654~ ~~MLA~11/11/2023 16:15~LIS~11/11/2023 18:45~~",
+        "flightNumber": "FR9654",
+        "previousPrice": null,
+        "priceUpdated": 1698908107000
+      },
+      "summary": {
+        "price": {
+          "value": 229.23,
+          "valueMainUnit": "229",
+          "valueFractionalUnit": "23",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Germany",
+          "iataCode": "CGN",
+          "name": "Cologne",
+          "seoName": "cologne-bonn",
+          "city": {
+            "name": "Cologne",
+            "code": "COLOGNE",
+            "countryCode": "de"
+          }
+        },
+        "departureDate": "2023-11-11T17:50:00",
+        "arrivalDate": "2023-11-11T20:45:00",
+        "price": {
+          "value": 255.99,
+          "valueMainUnit": "255",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~5206~ ~~MLA~11/11/2023 17:50~CGN~11/11/2023 20:45~~",
+        "flightNumber": "FR5206",
+        "previousPrice": null,
+        "priceUpdated": 1698926572000
+      },
+      "summary": {
+        "price": {
+          "value": 255.99,
+          "valueMainUnit": "255",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Poland",
+          "iataCode": "GDN",
+          "name": "Gdansk",
+          "seoName": "gdansk",
+          "city": {
+            "name": "Gdansk",
+            "code": "GDANSK",
+            "countryCode": "pl"
+          }
+        },
+        "departureDate": "2023-11-11T09:55:00",
+        "arrivalDate": "2023-11-11T13:10:00",
+        "price": {
+          "value": 277.49,
+          "valueMainUnit": "277",
+          "valueFractionalUnit": "49",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~5207~ ~~MLA~11/11/2023 09:55~GDN~11/11/2023 13:10~~",
+        "flightNumber": "FR5207",
+        "previousPrice": null,
+        "priceUpdated": 1698906686000
+      },
+      "summary": {
+        "price": {
+          "value": 277.49,
+          "valueMainUnit": "277",
+          "valueFractionalUnit": "49",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Belgium",
+          "iataCode": "CRL",
+          "name": "Brussels Charleroi",
+          "seoName": "brussels-charleroi",
+          "city": {
+            "name": "Charleroi",
+            "code": "CHARLEROI",
+            "countryCode": "be"
+          }
+        },
+        "departureDate": "2023-11-11T17:45:00",
+        "arrivalDate": "2023-11-11T20:45:00",
+        "price": {
+          "value": 400.99,
+          "valueMainUnit": "400",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~2955~ ~~MLA~11/11/2023 17:45~CRL~11/11/2023 20:45~~",
+        "flightNumber": "FR2955",
+        "previousPrice": null,
+        "priceUpdated": 1698925147000
+      },
+      "summary": {
+        "price": {
+          "value": 400.99,
+          "valueMainUnit": "400",
+          "valueFractionalUnit": "99",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "countryName": "Malta",
+          "iataCode": "MLA",
+          "name": "Malta",
+          "seoName": "malta",
+          "city": {
+            "name": "Malta",
+            "code": "MALTA",
+            "countryCode": "mt"
+          }
+        },
+        "arrivalAirport": {
+          "countryName": "Italy",
+          "iataCode": "BGY",
+          "name": "Milan Bergamo",
+          "seoName": "milan-bergamo",
+          "city": {
+            "name": "Bergamo",
+            "code": "BERGAMO",
+            "countryCode": "it"
+          }
+        },
+        "departureDate": "2023-11-11T23:10:00",
+        "arrivalDate": "2023-11-12T01:10:00",
+        "price": {
+          "value": 401.0,
+          "valueMainUnit": "401",
+          "valueFractionalUnit": "00",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "flightKey": "FR~7855~ ~~MLA~11/11/2023 23:10~BGY~11/12/2023 01:10~~",
+        "flightNumber": "FR7855",
+        "previousPrice": null,
+        "priceUpdated": 1698925143000
+      },
+      "summary": {
+        "price": {
+          "value": 401.0,
+          "valueMainUnit": "401",
+          "valueFractionalUnit": "00",
+          "currencyCode": "EUR",
+          "currencySymbol": "€"
+        },
+        "previousPrice": null,
+        "newRoute": false
+      }
+    }
+  ],
+  "nextPage": null,
+  "size": 33
+}
