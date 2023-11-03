@@ -3,7 +3,6 @@ import { parseJSON, add, format } from "date-fns";
 import ExpandableList from "../Components/ExpandableList";
 
 //https://www.ryanair.com/api/view"https://www.ryanair.com/api/farfnd/v4/oneWayFares?departureAirportIataCode=WAW&outboundDepartureDateFrom=2023-11-11&market=en-ie&adultPaxCount=1&outboundDepartureDateTo=2023-11-11&outboundDepartureTimeFrom=00:00&outboundDepartureTimeTo=23:59"
-import data from "../../public/data.json";
 
 function FlightList({ data, onSelect }) {
   return (
@@ -56,7 +55,7 @@ function FlightSelect({ date, origin, addFlight }) {
       </div>
 
       <FlightList
-        data={data}
+        data={{ fares: [] }}
         onSelect={(flight) => {
           addFlight(flight);
           setDayOffset(0);
