@@ -35,7 +35,7 @@ function FlightSelect({ date, origin, addFlight }) {
   if (error) return "An error has occurred: " + error.message;
 
   return (
-    <div>
+    <div style={{ padding: "20px 10px" }}>
       <div>
         Its {format(currentDate, "dd-MM-yyyy HH:mm")} (arrival plus {dayOffset}{" "}
         days), you are in {origin}

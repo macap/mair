@@ -4,9 +4,22 @@
   background: var(--color-dark);
   display: flex;
   padding: 10px 15px;
-  justify-content: space-between;
+  // justify-content: space-between;
   text-align: left;
   position: relative;
+
+  display: flex;
+  // flex-direction: row;
+  // align-items: center;
+  // justify-content: flex-end;
+  // position: fixed;
+  // left: 0;
+  // top: 0;
+  width: 100%;
+  z-index: 1;
+  padding: 20px 10px;
+
+  background: var(--color-dark);
 }
 
 .element {
@@ -58,6 +71,7 @@
   position: relative;
   flex-grow: 1;
   text-align: center;
+  max-width: 200px;
   &:after {
     width: 100%;
     height: 1px;

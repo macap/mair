@@ -5,6 +5,7 @@ import CurrentRoute from "./CurrentRoute";
 import Summary from "./Summary";
 import Itineraries from "./Itineraries";
 import Map from "./Map";
+import Layout from "../Components/Layout";
 
 let mockStartFlight = [];
 
@@ -31,7 +32,7 @@ mockStartFlight = [
   },
 ];
 
-mockStartFlight = [];
+// mockStartFlight = [];
 
 export default function App() {
   const [flights, setFlights] = useState([...mockStartFlight]);
@@ -53,21 +54,25 @@ export default function App() {
   const departureAirport = lastFlight.outbound.arrivalAirport.iataCode;
 
   return (
-    <div>
-      <CurrentRoute flights={flights} deleteFlight={deleteFlight} />
-      <Itineraries flights={flights} setFlights={setFlights} />
-      <Summary flights={flights} />
-
-      <div style={{ display: "flex" }}>
-        <FlightSelect
-          date={departureDate}
-          origin={departureAirport}
-          addFlight={addFlight}
-        />
-        <div style={{ width: "calc(100vw - 500px)" }}>
+    <Layout>
+      <Layout.Header>
+        <CurrentRoute flights={flights} deleteFlight={deleteFlight} />
+      </Layout.Header>
+      <Layout.Row>
+        <Layout.Aside>
+          <FlightSelect
+            date={departureDate}
+            origin={departureAirport}
+            addFlight={addFlight}
+          />
+        </Layout.Aside>
+        <Layout.Content>
           <Map flights={flights} />
-        </div>
-      </div>
-    </div>
+        </Layout.Content>
+      </Layout.Row>
+      <Layout.Footer>
+        <Summary flights={flights} />
+      </Layout.Footer>
+    </Layout>
   );
 }

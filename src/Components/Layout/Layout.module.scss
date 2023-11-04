@@ -1,0 +1,41 @@
+$headerHeight: 90px;
+$footerHeight: 90px;
+$space: $footerHeight + $headerHeight;
+
+.layout {
+  width: 100%;
+  width: 100vw;
+  background: var(--color-dark-faded);
+  color: var(--color-text-default);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: $headerHeight;
+  background: var(--color-dark);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  & > * {
+    max-height: calc(100vh - $space);
+    overflow-y: scroll;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: $footerHeight;
+  background: var(--color-dark);
+}
+
+.aside {
+}
+
+.content {
+  flex-grow: 1;
+}
