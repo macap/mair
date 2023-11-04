@@ -1,4 +1,10 @@
-import { parseJSON, formatDistance } from "date-fns";
+import {
+  parseJSON,
+  formatDistance,
+  addDays,
+  differenceInCalendarDays,
+  format,
+} from "date-fns";
 import css from "./FlightTimeline.module.scss";
 
 const mapData = (f) => ({
@@ -15,36 +21,53 @@ function durationInCity(arrivalString, departureString) {
 
 function FlightTimeline({ flights, deleteFlight }) {
   if (!flights.length) return null;
-  const startDate = flights[0].outbound.departureDate;
-  const endDate = flights[flights.length - 1].outbound.arrivalDate;
+  const startDate = parseJSON(flights[0].outbound.departureDate);
+  const endDate = parseJSON(flights[flights.length - 1].outbound.arrivalDate);
+
+  let currDate = startDate;
 
   return (
     <div className={css.timeline}>
+      <div className={css.date}>{format(startDate, "EEEEEE, d MMM")}</div>
       {flights.map((f, i) => (
         <>
           <div className={css.element}>
+            {differenceInCalendarDays(
+              parseJSON(f.outbound.departureDate),
+              currDate
+            ) > 0
+              ? (() => {
+                  currDate = parseJSON(f.outbound.departureDate);
+                  return (
+                    <div className={css.date}>
+                      {format(currDate, "EEEEEE, d MMM")}
+                    </div>
+                  );
+                })()
+              : null}
             {f.outbound.arrivalAirport.iataCode}
             {i === flights.length - 1 ? (
               <div className={css.delete}>
                 <button onClick={() => deleteFlight(i)}>{"❌"}</button>
               </div>
             ) : null}
-            <div className={css.tooltip}>
-              <div>
-                {f.outbound.arrivalAirport.name} (
-                {f.outbound.arrivalAirport.iataCode}),{" "}
-                {f.outbound.arrivalAirport.countryName}
-              </div>
-              <div>Departure: {f.outbound.departureDate}</div>
-              <div>Arrival: {f.outbound.arrivalDate}</div>
-              {f.summary && f.summary.price ? (
+            {i > 0 ? (
+              <div className={css.tooltip}>
+                <div>
+                  {f.outbound.arrivalAirport.name} (
+                  {f.outbound.arrivalAirport.iataCode}),{" "}
+                  {f.outbound.arrivalAirport.countryName}
+                </div>
+                <div>Departure: {f.outbound.departureDate}</div>
+                <div>Arrival: {f.outbound.arrivalDate}</div>
                 <div>
                   {f.summary.price.value} {f.summary.price.currencySymbol}
                 </div>
-              ) : null}
-            </div>
+              </div>
+            ) : null}
           </div>
-          {i + 1 < flights.length ? (
+
+          {i > 0 && i + 1 < flights.length ? (
             <div className={css.duration}>
               {durationInCity(
                 f.outbound.arrivalDate,

@@ -4,7 +4,7 @@ import FlightSelect from "./FlightSelect";
 import CurrentRoute from "./CurrentRoute";
 import Summary from "./Summary";
 import Itineraries from "./Itineraries";
-import { SvgMap } from "../Components/svgmap";
+import Map from "./Map";
 
 let mockStartFlight = [];
 
@@ -31,7 +31,7 @@ mockStartFlight = [
   },
 ];
 
-// mockStartFlight = [];
+mockStartFlight = [];
 
 export default function App() {
   const [flights, setFlights] = useState([...mockStartFlight]);
@@ -65,7 +65,7 @@ export default function App() {
           addFlight={addFlight}
         />
         <div style={{ width: "calc(100vw - 500px)" }}>
-          <SvgMap selectedCountries={[]} />
+          <Map flights={flights} />
         </div>
       </div>
     </div>

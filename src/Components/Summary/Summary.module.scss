@@ -6,8 +6,17 @@
 
 .inner {
   text-align: right;
-  background: #e0e7ff;
+  background: var(--color-dark);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 5px 10px;
+  padding-top: 25px;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--color-primary);
+  white-space: nowrap;
 }

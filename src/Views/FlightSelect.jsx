@@ -45,9 +45,11 @@ function FlightSelect({ date, origin, addFlight }) {
           disabled={dayOffset === 0}
           onClick={() => setDayOffset((d) => d - 1)}
         >
-          Previous day
+          Shorten your stay here by -1 day
         </button>
-        <button onClick={() => setDayOffset((d) => d + 1)}>Next day</button>
+        <button onClick={() => setDayOffset((d) => d + 1)}>
+          Stay here for +1 more day
+        </button>
       </div>
 
       {isPending || isFetching ? (
