@@ -37,11 +37,14 @@
 
 .panAndZoom {
   position: relative;
+
+  height: 100%;
 }
 
 .panAndZoom-wrapper {
   width: 100%;
-  height: 650px;
+  min-height: 650px;
+  height: 100%;
   overflow: hidden;
   background: var(--color-dark-faded, #a3ccff);
   position: relative;

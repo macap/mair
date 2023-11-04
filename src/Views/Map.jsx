@@ -12,27 +12,22 @@ function Map({ flights }) {
   );
 
   return (
-    <div>
-      <SvgMap selectedCountries={[]}>
-        {mapFlights.map((a, i) => (
-          <>
-            <SvgMapMarker
-              latlng={`${a.latitude},${a.longitude}`}
-              name={a.name}
+    <SvgMap selectedCountries={[]}>
+      {mapFlights.map((a, i) => (
+        <>
+          <SvgMapMarker latlng={`${a.latitude},${a.longitude}`} name={a.name} />
+          {i + 1 < flights.length ? (
+            <SvgMapLink
+              from={{ lat: a.latitude, lng: a.longitude }}
+              to={{
+                lat: mapFlights[i + 1].latitude,
+                lng: mapFlights[i + 1].longitude,
+              }}
             />
-            {i + 1 < flights.length ? (
-              <SvgMapLink
-                from={{ lat: a.latitude, lng: a.longitude }}
-                to={{
-                  lat: mapFlights[i + 1].latitude,
-                  lng: mapFlights[i + 1].longitude,
-                }}
-              />
-            ) : null}
-          </>
-        ))}
-      </SvgMap>
-    </div>
+          ) : null}
+        </>
+      ))}
+    </SvgMap>
   );
 }
 
