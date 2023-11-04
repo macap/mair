@@ -3,6 +3,7 @@ import StartForm from "./StartForm";
 import FlightSelect from "./FlightSelect";
 import CurrentRoute from "./CurrentRoute";
 import Summary from "./Summary";
+import Itineraries from "./Itineraries";
 
 let mockStartFlight = [];
 
@@ -23,8 +24,8 @@ mockStartFlight = [
           name: "Home",
         },
       },
-      departureDate: "2023-11-02T01:00:00",
-      arrivalDate: "2023-11-02T01:00:00",
+      departureDate: "2023-11-05T01:00:00",
+      arrivalDate: "2023-11-05T01:00:00",
     },
   },
 ];
@@ -36,7 +37,10 @@ export default function App() {
 
   const addFlight = (flight) => {
     setFlights([...flights, flight]);
-    console.log(JSON.stringify(flights));
+  };
+
+  const deleteFlight = (index) => {
+    setFlights((f) => f.filter((_, i) => i !== index));
   };
 
   if (flights.length === 0) {
@@ -49,8 +53,10 @@ export default function App() {
 
   return (
     <div>
+      <Itineraries flights={flights} setFlights={setFlights} />
+      <CurrentRoute flights={flights} deleteFlight={deleteFlight} />
       <Summary flights={flights} />
-      <CurrentRoute flights={flights} />
+
       <FlightSelect
         date={departureDate}
         origin={departureAirport}

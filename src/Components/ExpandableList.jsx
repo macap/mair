@@ -11,11 +11,11 @@ function ExpandableList({ children }) {
     <>
       {expanded ? children : Children.toArray(children).slice(0, 10)}
       {expanded ? null : (
-        <li key="more">
+        <div key="more" style={{ textAlign: "center" }}>
           <a href="#" onClick={() => setExpanded(true)}>
             more
           </a>
-        </li>
+        </div>
       )}
     </>
   );
