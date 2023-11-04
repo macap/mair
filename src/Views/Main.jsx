@@ -4,6 +4,7 @@ import FlightSelect from "./FlightSelect";
 import CurrentRoute from "./CurrentRoute";
 import Summary from "./Summary";
 import Itineraries from "./Itineraries";
+import { SvgMap } from "../Components/svgmap";
 
 let mockStartFlight = [];
 
@@ -53,15 +54,20 @@ export default function App() {
 
   return (
     <div>
-      <Itineraries flights={flights} setFlights={setFlights} />
       <CurrentRoute flights={flights} deleteFlight={deleteFlight} />
+      <Itineraries flights={flights} setFlights={setFlights} />
       <Summary flights={flights} />
 
-      <FlightSelect
-        date={departureDate}
-        origin={departureAirport}
-        addFlight={addFlight}
-      />
+      <div style={{ display: "flex" }}>
+        <FlightSelect
+          date={departureDate}
+          origin={departureAirport}
+          addFlight={addFlight}
+        />
+        <div style={{ width: "calc(100vw - 500px)" }}>
+          <SvgMap selectedCountries={[]} />
+        </div>
+      </div>
     </div>
   );
 }
