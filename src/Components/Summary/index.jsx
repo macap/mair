@@ -18,6 +18,7 @@ function Summary({
           {price} {currency}
         </div>
       </div>
+      <a className={css.link}>View details</a>
       <button className={css.button}>Call to action</button>
     </div>
   );

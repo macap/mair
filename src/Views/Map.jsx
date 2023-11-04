@@ -23,6 +23,7 @@ function Map({ flights }) {
                 lat: mapFlights[i + 1].latitude,
                 lng: mapFlights[i + 1].longitude,
               }}
+              color="#ffc300ff"
             />
           ) : null}
         </>

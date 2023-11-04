@@ -16,13 +16,15 @@ $space: $footerHeight + $headerHeight;
   width: 100%;
   height: $headerHeight;
   background: var(--color-dark);
+
+  display: flex;
 }
 
 .row {
   display: flex;
   flex-direction: row;
   & > * {
-    max-height: calc(100vh - $space);
+    height: calc(100vh - $space);
     overflow-y: scroll;
   }
 }
@@ -31,6 +33,7 @@ $space: $footerHeight + $headerHeight;
   width: 100%;
   height: $footerHeight;
   background: var(--color-dark);
+  display: flex;
 }
 
 .aside {
