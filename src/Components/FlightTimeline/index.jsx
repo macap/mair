@@ -28,10 +28,14 @@ function FlightTimeline({ flights, deleteFlight }) {
 
   return (
     <div className={css.timeline}>
-      <div className={css.date}>{format(startDate, "EEEEEE, d MMM")}</div>
       {flights.map((f, i) => (
         <>
           <div className={css.element}>
+            {i === 0 && (
+              <div className={css.date}>
+                {format(startDate, "EEEEEE, d MMM")}
+              </div>
+            )}
             {differenceInCalendarDays(
               parseJSON(f.outbound.departureDate),
               currDate
@@ -45,7 +49,9 @@ function FlightTimeline({ flights, deleteFlight }) {
                   );
                 })()
               : null}
-            {f.outbound.arrivalAirport.iataCode}
+            <div className={css.airportName}>
+              {f.outbound.arrivalAirport.iataCode}
+            </div>
             {i === flights.length - 1 ? (
               <div className={css.delete}>
                 <button onClick={() => deleteFlight(i)}>{"❌"}</button>

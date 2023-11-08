@@ -1,13 +1,15 @@
 ## Todo list
 
 ### MVP
-- [X] style "you are now" component
-- [] style timeline
+
+- [x] style "you are now" component
+- [x] style timeline
 - [] currency converter to sum total
 - [] view details modal with list of flights and link to book
 - [] style start form
 
 ### cleanup
+
 - [] rwd
 - [] redux
 - [] tests
