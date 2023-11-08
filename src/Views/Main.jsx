@@ -22,6 +22,7 @@ mockStartFlight = [
       arrivalAirport: {
         iataCode: "WAW",
         name: "WAW",
+        countryName: "Poland",
         city: {
           name: "Home",
         },
@@ -51,7 +52,7 @@ export default function App() {
 
   const lastFlight = flights[flights.length - 1];
   const departureDate = lastFlight.outbound.arrivalDate;
-  const departureAirport = lastFlight.outbound.arrivalAirport.iataCode;
+  const departureAirport = lastFlight.outbound.arrivalAirport;
 
   return (
     <Layout>

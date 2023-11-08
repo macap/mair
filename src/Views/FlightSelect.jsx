@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect  } from "react";
 import { parseJSON, add, format, setHours, setMinutes } from "date-fns";
 import { useQuery } from "@tanstack/react-query";
 import { getOneWayFares } from "../api/ryanair";
 import FlightList from "../Components/FlightList";
+import FlightForm from "../Components/FlightForm"
 
 function FlightSelect({ date, origin, addFlight }) {
   const [dayOffset, setDayOffset] = useState(0);
+  // const [currentOrigin, setOrigin] = useState(origin);
   const parsedDate = parseJSON(date);
 
-  let currentDate = parsedDate;
-  // if days offset reset hour to 00
+  // useEffect(() => {
+  //   setOrigin(origin);
+  // }, [origin])
 
+  let currentDate = parsedDate;
   if (dayOffset > 0) {
     currentDate = setHours(
       setMinutes(add(parsedDate, { days: dayOffset }), 0),
@@ -22,7 +26,7 @@ function FlightSelect({ date, origin, addFlight }) {
     queryKey: [
       "flights",
       {
-        origin,
+        origin: origin.iataCode,
         date: format(currentDate, "y-MM-dd"),
         timeFrom: "00:00",
         timeTo: "23:59",
@@ -35,23 +39,8 @@ function FlightSelect({ date, origin, addFlight }) {
   if (error) return "An error has occurred: " + error.message;
 
   return (
-    <div style={{ padding: "20px 10px" }}>
-      <div>
-        Its {format(currentDate, "dd-MM-yyyy HH:mm")} (arrival plus {dayOffset}{" "}
-        days), you are in {origin}
-      </div>
-      <div>
-        <button
-          disabled={dayOffset === 0}
-          onClick={() => setDayOffset((d) => d - 1)}
-        >
-          Shorten your stay here by -1 day
-        </button>
-        <button onClick={() => setDayOffset((d) => d + 1)}>
-          Stay here for +1 more day
-        </button>
-      </div>
-
+    <div style={{ padding: "10px 10px" }}>
+      <FlightForm arrivalDate={parsedDate} currentDate={currentDate} dayOffset={dayOffset} setDayOffset={setDayOffset} currentOrigin={origin} />
       {isPending || isFetching ? (
         "Loading"
       ) : (
