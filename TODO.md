@@ -4,7 +4,7 @@
 
 - [x] style "you are now" component
 - [x] style timeline
-- [] currency converter to sum total
+- [x] currency converter to sum total
 - [] view details modal with list of flights and link to book
 - [] style start form
 
@@ -16,6 +16,8 @@
 
 ### improvements
 
+- [] currency selector
+- [] i18n | lang selector
 - [] change the airport youre currently on
 - [] higlight country you are now in
 - [] Save/Load itineraries

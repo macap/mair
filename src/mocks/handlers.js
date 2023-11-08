@@ -2,11 +2,19 @@ import { http, HttpResponse } from "msw";
 import { format, add } from "date-fns";
 import data from "./data.json";
 import airports from "./airports.json";
+import currA from "./currA.json";
+import currB from "./currB.json";
 
 export const handlers = [
   http.get("/data", ({ request, params, cookies }) => {
     return HttpResponse.json(data);
   }),
+  http.get("https://api.nbp.pl/api/exchangerates/tables/A?format=json", () =>
+    HttpResponse.json(currA)
+  ),
+  http.get("https://api.nbp.pl/api/exchangerates/tables/B?format=json", () =>
+    HttpResponse.json(currB)
+  ),
   http.get(
     "https://www.ryanair.com/api/farfnd/v4/oneWayFares",
     ({ request, params, cookies }) => {
