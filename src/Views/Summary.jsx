@@ -1,6 +1,9 @@
+import { useState } from "react";
+import { createPortal } from "react-dom";
 import { useQuery } from "@tanstack/react-query";
 import { parseJSON, differenceInCalendarDays } from "date-fns";
 import SummaryComponent from "../Components/Summary";
+import FlightsModal from "../Components/FlightsModal";
 import { getCurrencyRates } from "../api/nbp";
 
 // todo: currency: https://api.nbp.pl/api/exchangerates/tables/A?format=json
@@ -15,7 +18,7 @@ function useCurrencyConverter(values) {
 
   if (error) console.error("An error has occurred: " + error.message);
 
-  if (error || isPending || isFetching) return null;
+  if (error || isPending || isFetching || !values.length > 0) return null;
 
   const rates = data.reduce((o, v) => {
     o[v.code] = v.mid;
@@ -30,19 +33,21 @@ function useCurrencyConverter(values) {
 }
 
 function Summary({ flights }) {
+  const [showModal, setShowModal] = useState(false);
+  const totalPrice = useCurrencyConverter(
+    flights
+      .slice(1)
+      .map((e) => [e.summary.price.value, e.summary.price.currencyCode])
+  );
+
   if (flights.length < 2) return null;
+
   const startDate = flights[0].outbound.departureDate;
   const endDate = flights[flights.length - 1].outbound.arrivalDate;
 
   const days = differenceInCalendarDays(
     parseJSON(endDate),
     parseJSON(startDate)
-  );
-
-  const totalPrice = useCurrencyConverter(
-    flights
-      .slice(1)
-      .map((e) => [e.summary.price.value, e.summary.price.currencyCode])
   );
 
   const currTotal = flights
@@ -62,15 +67,26 @@ function Summary({ flights }) {
     .join(" + ");
 
   return (
-    <SummaryComponent
-      price={totalPrice}
-      priceInfo={priceInfo}
-      currency={""}
-      startDate={flights[0].outbound.departureDate}
-      endDate={flights[flights.length - 1].outbound.arrivalDate}
-      daysCount={days}
-      flightsCount={flights.length - 1}
-    />
+    <>
+      <SummaryComponent
+        price={totalPrice}
+        priceInfo={priceInfo}
+        currency={""}
+        startDate={flights[0].outbound.departureDate}
+        endDate={flights[flights.length - 1].outbound.arrivalDate}
+        daysCount={days}
+        flightsCount={flights.length - 1}
+        onClick={() => setShowModal(true)}
+      />
+      {showModal &&
+        createPortal(
+          <FlightsModal
+            flights={flights}
+            onClose={() => setShowModal(false)}
+          />,
+          document.body
+        )}
+    </>
   );
 }
 

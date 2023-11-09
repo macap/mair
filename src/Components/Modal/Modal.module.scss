@@ -1,0 +1,53 @@
+.wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  z-index: 9998;
+  align-items: center;
+  justify-content: center;
+}
+
+.window {
+  padding: 20px;
+  background: #fff;
+  background: var(--color-dark);
+  z-index: 9999;
+  position: relative;
+}
+
+.content {
+}
+
+.close {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--color-primary-faded);
+  }
+  &:hover {
+    svg {
+      fill: var(--color-primary-highlight);
+    }
+  }
+}

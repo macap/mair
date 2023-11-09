@@ -17,15 +17,20 @@ interface FlightListElementProps {
   priceValue: Number;
   currencySymbol: String;
   isDisabled?: boolean;
-  onClick: () => void;
+  withDate?: boolean;
+  onClick?: () => void;
 }
 
 const FlightListElement = (f: FlightListElementProps): JSX.Element => (
   <div
-    className={cx(css.element, { [css.disabled]: f.isDisabled })}
+    className={cx(css.element, {
+      [css.disabled]: f.isDisabled,
+      [css.clickable]: !!f.onClick,
+    })}
     onClick={f.onClick}
   >
     <div className={css.left}>
+      {f.withDate && <div className={css.date}>{f.departureDate}</div>}
       <div className={css.airport}>
         <div className={css.time}>{f.departureTime}</div>
         <div className={css.airportName}>

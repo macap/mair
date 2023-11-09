@@ -8,6 +8,7 @@ function Summary({
   endDate,
   daysCount,
   flightsCount,
+  onClick,
 }) {
   return (
     <div className={css.summary}>
@@ -18,8 +19,10 @@ function Summary({
         <div className={css.price}>{price ? `~${price}` : priceInfo}</div>
         {price && <div className={css.tooltip}>({priceInfo})</div>}
       </div>
-      <a className={css.link}>View details</a>
-      <button className={css.button}>Call to action</button>
+      {/* <a className={css.link}>View details</a> */}
+      <button className={css.button} onClick={onClick}>
+        Book flights
+      </button>
     </div>
   );
 }

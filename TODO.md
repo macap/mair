@@ -5,7 +5,7 @@
 - [x] style "you are now" component
 - [x] style timeline
 - [x] currency converter to sum total
-- [] view details modal with list of flights and link to book
+- [x] view details modal with list of flights and link to book
 - [] style start form
 
 ### cleanup
