@@ -7,7 +7,7 @@
 - [x] currency converter to sum total
 - [x] view details modal with list of flights and link to book
 - [x] style start form
-- [] style home page
+- [x] basic style for style home page
 
 ### cleanup
 
@@ -17,6 +17,7 @@
 
 ### improvements
 
+- [] landing page content
 - [] currency selector
 - [] i18n | lang selector
 - [] change the airport youre currently on

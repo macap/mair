@@ -45,7 +45,7 @@ function DepartureForm({ onSubmit }) {
         disabled={!departureDate || !departureAirport}
         onClick={() => onSubmit(departureAirport, departureDate)}
       >
-        Search
+        Start
       </button>
     </div>
   );

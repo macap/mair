@@ -58,7 +58,7 @@ export default function App() {
     <Layout>
       <Layout.Header>
         <CurrentRoute flights={flights} deleteFlight={deleteFlight} />
-        <button onClick={() => prompt("Name")}>TODO: Save</button>
+        {/* <button onClick={() => prompt("Name")}>TODO: Save</button> */}
       </Layout.Header>
       <Layout.Row>
         <Layout.Aside>
@@ -73,9 +73,9 @@ export default function App() {
         </Layout.Content>
       </Layout.Row>
       <Layout.Footer>
-        <select>
+        {/* <select>
           <option>TODO: reload previous</option>
-        </select>
+        </select> */}
         <Summary flights={flights} />
       </Layout.Footer>
     </Layout>
