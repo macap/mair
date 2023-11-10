@@ -33,7 +33,7 @@ mockStartFlight = [
   },
 ];
 
-// mockStartFlight = [];
+mockStartFlight = [];
 
 export default function App() {
   const [flights, setFlights] = useState([...mockStartFlight]);
