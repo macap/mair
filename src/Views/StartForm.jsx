@@ -20,6 +20,13 @@ function StartForm({ addFlight }) {
         departureDate: `${date}T00:00:00`,
         arrivalDate: `${date}T00:00:00`,
       },
+      summary: {
+        price: {
+          value: 0,
+          currencyCode: "PLN",
+          currencySymbol: "zł",
+        },
+      },
     });
   };
 

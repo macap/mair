@@ -9,6 +9,10 @@
 - [x] style start form
 - [x] basic style for style home page
 
+### Bugfixes
+
+- [x] NaN on total sum
+
 ### cleanup
 
 - [] rwd
@@ -21,13 +25,17 @@
 - [] currency selector
 - [] i18n | lang selector
 - [] change the airport youre currently on
+- [] research w6 api
+- [] share url
+- [] destinations info - transfer price and time to city, hotel price
+
+### map
+
 - [] higlight country you are now in
 - [] Save/Load itineraries
 - [] arrows on map connections
 - [] highlight routes on map
 - [] present connections to be selected on map while hovered
-- [] research w6 api
-- [] share url
 
 ## other requests:
 

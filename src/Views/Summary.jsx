@@ -26,7 +26,8 @@ function useCurrencyConverter(values) {
   }, {});
 
   const totalPLN = values.reduce((sum, [val, curr]) => {
-    return sum + val * rates[curr];
+    const plnval = curr === "PLN" ? val : val * rates[curr];
+    return sum + plnval;
   }, 0);
 
   return Math.round(totalPLN * 100) / 100 + " PLN";
