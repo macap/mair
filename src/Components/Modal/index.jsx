@@ -5,11 +5,7 @@ function Modal({ onClose, children }) {
     <div className={css.wrapper}>
       <div className={css.overlay} onClick={onClose} />
       <div className={css.window}>
-        <button
-          className={css.close}
-          aria-label="Close modal"
-          onClick={onClose}
-        >
+        <button className={css.close} title="Close modal" onClick={onClose}>
           <svg
             version="1.1"
             viewBox="0 0 36 36"

@@ -42,7 +42,7 @@ export const handlers = [
         { currencyCode: "EUR", currencySymbol: "€" },
         { currencyCode: "PLN", currencySymbol: "zł" },
         { currencyCode: "HUF", currencySymbol: "Ft" },
-      ][Math.floor(Math.random() * 3)];
+      ][departureAirportIataCode === "WAW" ? 1 : Math.floor(Math.random() * 3)];
 
       const mockedData = {
         ...data,

@@ -44,6 +44,7 @@ function DepartureForm({ onSubmit }) {
         className={css.button}
         disabled={!departureDate || !departureAirport}
         onClick={() => onSubmit(departureAirport, departureDate)}
+        data-testid="submit-departure-form"
       >
         Start
       </button>

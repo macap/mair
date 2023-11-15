@@ -54,7 +54,9 @@ function FlightTimeline({ flights, deleteFlight }) {
             </div>
             {i === flights.length - 1 ? (
               <div className={css.delete}>
-                <button onClick={() => deleteFlight(i)}>{"❌"}</button>
+                <button title="Delete flight" onClick={() => deleteFlight(i)}>
+                  {"❌"}
+                </button>
               </div>
             ) : null}
             {i > 0 ? (

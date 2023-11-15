@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { loadMap } from "./helpers";
 import PanAndZoom from "./panAndZoom";
 import "./svgmap.css";
+import countries from "./map.json";
 
 const Country = (props) => (
   <path
@@ -18,9 +19,10 @@ export class SvgMap extends Component {
   };
 
   componentDidMount() {
-    loadMap().then((countries) =>
-      this.setState({ countries: countries.countries.path })
-    );
+    // loadMap().then((countries) =>
+    this.setState({ countries: countries.countries.path });
+    // TODO: fix map loading
+    // );
   }
 
   render() {

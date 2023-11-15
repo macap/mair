@@ -28,6 +28,7 @@ const FlightListElement = (f: FlightListElementProps): JSX.Element => (
       [css.clickable]: !!f.onClick,
     })}
     onClick={f.onClick}
+    data-testid="element-flightlist"
   >
     <div className={css.left}>
       {f.withDate && <div className={css.date}>{f.departureDate}</div>}
