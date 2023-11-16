@@ -1,42 +1,13 @@
 import React, { useState } from "react";
-import StartForm from "./StartForm";
-import FlightSelect from "./FlightSelect";
-import CurrentRoute from "./CurrentRoute";
-import Summary from "./Summary";
-import Itineraries from "./Itineraries";
-import Map from "./Map";
+import StartForm from "./Start";
+import FlightSelect from "../Partials/FlightSelect";
+import Summary from "../Partials/Summary";
+import Map from "../Partials/Map";
 import Layout from "../Components/Layout";
-
-let mockStartFlight = [];
-
-// mockStartFlight = [
-//   {
-//     outbound: {
-//       departureAirport: {
-//         iataCode: "WAW",
-//         name: "WAW",
-//         city: {
-//           name: "Home",
-//         },
-//       },
-//       arrivalAirport: {
-//         iataCode: "WAW",
-//         name: "WAW",
-//         countryName: "Poland",
-//         city: {
-//           name: "Home",
-//         },
-//       },
-//       departureDate: "2023-11-05T01:00:00",
-//       arrivalDate: "2023-11-05T01:00:00",
-//     },
-//   },
-// ];
-
-// mockStartFlight = [];
+import FlightTimeline from "../Components/FlightTimeline";
 
 export default function App() {
-  const [flights, setFlights] = useState([...mockStartFlight]);
+  const [flights, setFlights] = useState([]);
 
   const addFlight = (flight) => {
     setFlights([...flights, flight]);
@@ -59,9 +30,8 @@ export default function App() {
       <Layout>
         <Layout.Header>
           <div data-testid="area-timeline">
-            <CurrentRoute flights={flights} deleteFlight={deleteFlight} />
+            <FlightTimeline flights={flights} deleteFlight={deleteFlight} />
           </div>
-          {/* <button onClick={() => prompt("Name")}>TODO: Save</button> */}
         </Layout.Header>
         <Layout.Row>
           <Layout.Aside>
@@ -78,9 +48,6 @@ export default function App() {
           </Layout.Content>
         </Layout.Row>
         <Layout.Footer>
-          {/* <select>
-          <option>TODO: reload previous</option>
-        </select> */}
           <div data-testid="area-summary">
             <Summary flights={flights} />
           </div>

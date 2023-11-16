@@ -1,5 +1,5 @@
 import { SvgMap, SvgMapLink, SvgMapMarker } from "../Components/svgmap";
-import airports from "../../public/airports.json";
+import airports from "../data/airports_data.json";
 
 const airportIndex = airports.reduce((acc, a) => {
   acc[a.code] = { ...a.coordinates, code: a.code, name: a.name };

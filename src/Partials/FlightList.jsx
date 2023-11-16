@@ -1,6 +1,6 @@
-import ExpandableList from "./ExpandableList";
+import ExpandableList from "../Components/ExpandableList";
 import { isBefore } from "date-fns";
-import FlightListElement from "./FlightListElement";
+import FlightListElement from "../Components/FlightListElement";
 
 function FlightList({ data, onSelect, currentDate }) {
   return (
@@ -45,23 +45,3 @@ function FlightList({ data, onSelect, currentDate }) {
 }
 
 export default FlightList;
-
-{
-  /* <li>
-  <div>
-    {disabled ? "❌" : ""}
-    <a
-      href="#"
-      onClick={() => onSelect(el)}
-      style={disabled ? { opacity: 0.5 } : {}}
-    >
-      {el.outbound.arrivalAirport.name} ({el.outbound.arrivalAirport.iataCode})
-      {el.outbound.arrivalAirport.countryName}
-    </a>
-    , {} {}
-  </div>
-  <div>
-    {el.outbound.departureDate} - {el.outbound.arrivalDate}
-  </div>
-</li>; */
-}

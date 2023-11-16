@@ -1,37 +1,9 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
-import { useQuery } from "@tanstack/react-query";
 import { parseJSON, differenceInCalendarDays } from "date-fns";
 import SummaryComponent from "../Components/Summary";
-import FlightsModal from "../Components/FlightsModal";
-import { getCurrencyRates } from "../api/nbp";
-
-// todo: currency: https://api.nbp.pl/api/exchangerates/tables/A?format=json
-// https://api.nbp.pl/api/exchangerates/tables/B?format=json
-
-function useCurrencyConverter(values) {
-  const { isPending, error, data, isFetching } = useQuery({
-    queryKey: ["rates"],
-    queryFn: getCurrencyRates,
-    staleTime: 1200000,
-  });
-
-  if (error) console.error("An error has occurred: " + error.message);
-
-  if (error || isPending || isFetching || !values.length > 0) return null;
-
-  const rates = data.reduce((o, v) => {
-    o[v.code] = v.mid;
-    return o;
-  }, {});
-
-  const totalPLN = values.reduce((sum, [val, curr]) => {
-    const plnval = curr === "PLN" ? val : val * rates[curr];
-    return sum + plnval;
-  }, 0);
-
-  return Math.round(totalPLN * 100) / 100 + " PLN";
-}
+import FlightsModal from "./FlightsModal";
+import useCurrencyConverter from "../Hooks/useCurrencyConverter";
 
 function Summary({ flights }) {
   const [showModal, setShowModal] = useState(false);

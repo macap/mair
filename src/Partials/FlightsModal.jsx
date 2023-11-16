@@ -1,5 +1,5 @@
-import FlightListElement from "../FlightListElement";
-import Modal from "../Modal";
+import FlightListElement from "../Components/FlightListElement";
+import Modal from "../Components/Modal";
 function FlightsModal({ flights, onClose }) {
   const onSelect = () => null;
   return (

@@ -16,7 +16,7 @@
 ### cleanup
 
 - [x] integration tests for critical stuff
-- [ ] cleanup project and component structure a bit
+- [x] cleanup project and component structure a bit
 - [ ] visual regression testing (screenshot comprasion)
   - https://github.com/americanexpress/jest-image-snapshot
   - or per component: https://github.com/lost-pixel/lost-pixel + ladle/storybook?
