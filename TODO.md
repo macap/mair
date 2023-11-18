@@ -35,6 +35,7 @@
 - [] research w6 api
 - [] share url
 - [] destinations info - transfer price and time to city, hotel price
+- [] improve how aiport details are managed - names/code are included in flight request, but we need all airports for map (lat,lng) and origin selection (autocomplete/search may be enough)
 
 ### map
 

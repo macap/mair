@@ -1,6 +1,8 @@
 import DaySelector from "../DaySelector";
 import css from "./DepartureHeader.module.scss";
 
+// TODO: move departure icon to assets
+
 function DepartureHeader({ currentOrigin, setOrigin }) {
   return (
     <div className={css.flightform}>

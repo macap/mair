@@ -33,6 +33,17 @@ function useCurrencyConverter(
   }, 0);
 
   return Math.round(totalPLN * 100) / 100 + " PLN";
+
+  // TODO:
+  // const totalPLNRounded = Math.round(totalPLN * 100) / 100;
+
+  // const groupedValues =
+
+  // return {
+  //   value: totalPLNRounded,
+  //   currencyCode: 'PLN',
+  //   groupedValues:
+  // };
 }
 
 export default useCurrencyConverter;
