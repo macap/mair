@@ -12,6 +12,7 @@
 ### Bugfixes
 
 - [x] NaN on total sum
+- [] Validate the app using other locale settings (TZ: UTC | GMT +3)
 
 ### cleanup
 
@@ -26,6 +27,8 @@
 ### improvements
 
 - [] landing page content
+  animation: https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dashoffset
+  https://blog.logrocket.com/how-to-animate-svg-css-tutorial-examples/#line-drawing-animation
 - [] currency selector
 - [] i18n | lang selector
 - [] change the airport youre currently on
