@@ -10,7 +10,10 @@ function Summary({ flights }) {
   const totalPrice = useCurrencyConverter(
     flights
       .slice(1)
-      .map((e) => [e.summary.price.value, e.summary.price.currencyCode])
+      .map((e) => ({
+        value: e.summary.price.value,
+        currencyCode: e.summary.price.currencyCode,
+      }))
   );
 
   if (flights.length < 2) return null;

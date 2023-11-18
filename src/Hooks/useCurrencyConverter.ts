@@ -1,7 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { getCurrencyRates } from "../api/nbp";
 
-function useCurrencyConverter(values) {
+function useCurrencyConverter(
+  values: { value: number; currencyCode: string }[]
+) {
   const { isPending, error, data, isFetching } = useQuery({
     queryKey: ["rates"],
     queryFn: getCurrencyRates,
@@ -10,14 +12,22 @@ function useCurrencyConverter(values) {
 
   if (error) console.error("An error has occurred: " + error.message);
 
-  if (error || isPending || isFetching || !values.length > 0) return null;
+  if (error || isPending || isFetching || values.length === 0) return null;
 
   const rates = data.reduce((o, v) => {
     o[v.code] = v.mid;
     return o;
-  }, {});
+  }, {}) as { [k: string]: number };
 
-  const totalPLN = values.reduce((sum, [val, curr]) => {
+  // check if all required rates are available:
+  if (
+    !values.every(
+      ({ currencyCode }) => currencyCode === "PLN" || !!rates[currencyCode]
+    )
+  )
+    return null;
+
+  const totalPLN = values.reduce((sum, { value: val, currencyCode: curr }) => {
     const plnval = curr === "PLN" ? val : val * rates[curr];
     return sum + plnval;
   }, 0);
