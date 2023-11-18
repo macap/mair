@@ -2,13 +2,24 @@ import { format, add, setHours, setMinutes, isEqual } from "date-fns";
 import cx from "classnames";
 import css from "./DaySelector.module.scss";
 
-function DaySelector({ arrivalDate, currentDate, dayOffset, setDayOffset }) {
+// TODO: U test visibleOffset + displayDates
+
+export function useDaySelector(arrivalDate, dayOffset = 0) {
   const visibleOffset =
     dayOffset < 4
       ? [1, 2, 3]
       : [dayOffset - 1, dayOffset, dayOffset + 1, dayOffset + 2];
   const displayDates = visibleOffset.map((inc) =>
     setHours(setMinutes(add(arrivalDate, { days: inc }), 0), 0)
+  );
+
+  return { visibleOffset, displayDates };
+}
+
+function DaySelector({ arrivalDate, currentDate, dayOffset, setDayOffset }) {
+  const { visibleOffset, displayDates } = useDaySelector(
+    arrivalDate,
+    dayOffset
   );
 
   return (
