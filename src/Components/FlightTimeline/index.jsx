@@ -19,6 +19,24 @@ function durationInCity(arrivalString, departureString) {
   return formatDistance(arr, dep);
 }
 
+function FlightTooltip({ flight: f }) {
+  return (
+    <div className={css.tooltip}>
+      <div>
+        {f.outbound.arrivalAirport.name} ({f.outbound.arrivalAirport.iataCode}),{" "}
+        {f.outbound.arrivalAirport.countryName}
+      </div>
+      <div>Departure: {f.outbound.departureDate}</div>
+      <div>Arrival: {f.outbound.arrivalDate}</div>
+      <div>
+        {f.summary.price.value} {f.summary.price.currencySymbol}
+      </div>
+    </div>
+  );
+}
+
+// TODO: cleanup:
+
 function FlightTimeline({ flights, deleteFlight }) {
   if (!flights.length) return null;
   const startDate = parseJSON(flights[0].outbound.departureDate);
@@ -59,20 +77,7 @@ function FlightTimeline({ flights, deleteFlight }) {
                 </button>
               </div>
             ) : null}
-            {i > 0 ? (
-              <div className={css.tooltip}>
-                <div>
-                  {f.outbound.arrivalAirport.name} (
-                  {f.outbound.arrivalAirport.iataCode}),{" "}
-                  {f.outbound.arrivalAirport.countryName}
-                </div>
-                <div>Departure: {f.outbound.departureDate}</div>
-                <div>Arrival: {f.outbound.arrivalDate}</div>
-                <div>
-                  {f.summary.price.value} {f.summary.price.currencySymbol}
-                </div>
-              </div>
-            ) : null}
+            {i > 0 ? <FlightTooltip flight={f} /> : null}
           </div>
 
           {i > 0 && i + 1 < flights.length ? (
