@@ -48,7 +48,7 @@ export default function App() {
           </Layout.Content>
         </Layout.Row>
         <Layout.Footer>
-          <div data-testid="area-summary">
+          <div data-testid="area-summary" style={{ width: "100%" }}>
             <Summary flights={flights} />
           </div>
         </Layout.Footer>
