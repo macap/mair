@@ -46,6 +46,8 @@ button {
   --color-text-default: #fff;
   --color-text-highlighed: #ffc300ff;
   --color-text-faded: #b0b0b0;
+
+  --breakpoint-mobile: 768px;
 }
 
 a {
@@ -55,4 +57,9 @@ a {
 a:hover {
   text-decoration: underline;
   color: var(--color-primary-highlight);
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
 }
