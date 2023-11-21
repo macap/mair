@@ -1,4 +1,5 @@
 import { useState } from "react";
+import cx from "classnames";
 import css from "./DepartureForm.module.scss";
 
 import airports from "../../data/airports.json";
@@ -23,6 +24,7 @@ function DepartureForm({ onSubmit }) {
           id="origin"
           value={departureAirport}
           onChange={(e) => setDepartureAirport(e.target.value)}
+          className={cx(css.select, css.input__rounded_left)}
         >
           {airportsList.map((airport) => (
             <option key={airport.value} value={airport.value}>
@@ -38,15 +40,16 @@ function DepartureForm({ onSubmit }) {
           type="date"
           onChange={(e) => setDepartureDate(e.target.value)}
           value={departureDate}
+          className={css.input}
         />
       </div>
       <button
-        className={css.button}
+        className={cx(css.button, css.rounded_right)}
         disabled={!departureDate || !departureAirport}
         onClick={() => onSubmit(departureAirport, departureDate)}
         data-testid="submit-departure-form"
       >
-        Start
+        Plan your journey
       </button>
     </div>
   );
