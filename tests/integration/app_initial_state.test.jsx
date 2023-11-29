@@ -37,9 +37,8 @@ describe("Main page initial state", () => {
     // submit form
     fireEvent.click(screen.getByTestId("submit-departure-form"));
   });
-  it("shows correct origin and date on timeline", () => {
-    expect(getByText(getArea.timeline(), "WAW")).toBeTruthy();
-    expect(getByText(getArea.timeline(), "Su, 10 Nov")).toBeTruthy();
+  it("shows back button on timeline", () => {
+    expect(getByText(getArea.timeline(), "back")).toBeTruthy();
   });
   it("shows correct arrival day on flightform", () => {
     const arrivalDayBox = getByText(getArea.flightsForm(), "arrival day", {

@@ -23,19 +23,22 @@
   - or per component: https://github.com/lost-pixel/lost-pixel + ladle/storybook?
 - [] redux
 - [] rwd
+- [] icons as svg sprites https://benadam.me/thoughts/react-svg-sprites/
 
 ### improvements
 
-- [] landing page content
-  animation: https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dashoffset
-  https://blog.logrocket.com/how-to-animate-svg-css-tutorial-examples/#line-drawing-animation
+- [x] landing page content
+      animation: https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dashoffset
+      https://blog.logrocket.com/how-to-animate-svg-css-tutorial-examples/#line-drawing-animation
 - [] currency selector
 - [] i18n | lang selector
 - [] change the airport youre currently on
-- [] research w6 api
 - [] share url
 - [] destinations info - transfer price and time to city, hotel price
 - [] improve how aiport details are managed - names/code are included in flight request, but we need all airports for map (lat,lng) and origin selection (autocomplete/search may be enough)
+- [] sort retults
+- [] if its first flight you can change arrival day back
+- [] reset +days on flight removal
 
 ### map
 
@@ -48,3 +51,9 @@
 ## other requests:
 
 https://www.postman.com/hakkotsu/workspace/ryanair/request/5803268-0d38bf98-65c3-4d3a-bc9e-20180819e53b
+
+### random ideas
+
+- [] scraper biletyczarterowe.r.pl
+- [] push notifications
+- [] research w6 api

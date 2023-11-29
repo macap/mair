@@ -1,10 +1,11 @@
 import {
   parseJSON,
-  formatDistance,
+  formatDistanceStrict,
   addDays,
   differenceInCalendarDays,
   format,
 } from "date-fns";
+import cx from "classnames";
 import css from "./FlightTimeline.module.scss";
 
 const mapData = (f) => ({
@@ -16,7 +17,7 @@ function durationInCity(arrivalString, departureString) {
   const arr = parseJSON(arrivalString);
   const dep = parseJSON(departureString);
 
-  return formatDistance(arr, dep);
+  return formatDistanceStrict(arr, dep);
 }
 
 function FlightTooltip({ flight: f }) {
@@ -39,56 +40,83 @@ function FlightTooltip({ flight: f }) {
 
 function FlightTimeline({ flights, deleteFlight }) {
   if (!flights.length) return null;
-  const startDate = parseJSON(flights[0].outbound.departureDate);
-  const endDate = parseJSON(flights[flights.length - 1].outbound.arrivalDate);
-
-  let currDate = startDate;
+  if (flights.length === 1) {
+    // only departure city set:
+    return (
+      <div className={css.timeline}>
+        <div className={css.delete}>
+          <button title="Delete flight" onClick={() => deleteFlight(0)}>
+            {"back"}
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={css.timeline}>
-      {flights.map((f, i) => (
-        <>
-          <div className={css.element}>
-            {i === 0 && (
-              <div className={css.date}>
-                {format(startDate, "EEEEEE, d MMM")}
+      {flights.slice(1).map((f, i) => (
+        <div
+          className={css.element}
+          key={`f${f.outbound.departureAirport.iataCode}-${f.outbound.arrivalAirport.iataCode}`}
+        >
+          <div className={css.date}>
+            {format(parseJSON(f.outbound.departureDate), "d MMM, EEEEEE")}
+          </div>
+          <div className={css.vertWrapper}>
+            <div className={cx(css.box, css.flight)}>
+              <div className={css.flightIcon}>
+                <svg width="20" height="20">
+                  <rect width="20" height="20" style={{ fill: "#ffc300" }} />
+                </svg>
               </div>
-            )}
-            {differenceInCalendarDays(
-              parseJSON(f.outbound.departureDate),
-              currDate
-            ) > 0
-              ? (() => {
-                  currDate = parseJSON(f.outbound.departureDate);
-                  return (
-                    <div className={css.date}>
-                      {format(currDate, "EEEEEE, d MMM")}
-                    </div>
-                  );
-                })()
-              : null}
-            <div className={css.airportName}>
-              {f.outbound.arrivalAirport.iataCode}
+              <div>
+                <div className={css.vertWrapper}>
+                  <div className={css.flightTime}>
+                    {format(parseJSON(f.outbound.departureDate), "HH:MM")}
+                  </div>
+                  <div className={css.airportCode}>
+                    {f.outbound.departureAirport.iataCode}
+                  </div>
+                </div>
+                <div className={css.vertWrapper}>
+                  <div className={css.flightTime}>
+                    {format(parseJSON(f.outbound.arrivalDate), "HH:MM")}
+                  </div>
+                  <div className={css.airportCode}>
+                    {f.outbound.arrivalAirport.iataCode}
+                  </div>
+                </div>
+              </div>
             </div>
-            {i === flights.length - 1 ? (
+            {i + 2 < flights.length ? (
+              <div className={cx(css.box, css.duration)}>
+                <div className={css.durationIcon}>
+                  <svg width="20" height="20">
+                    <rect width="20" height="20" style={{ fill: "#fff" }} />
+                  </svg>
+                </div>
+                <div>
+                  {durationInCity(
+                    f.outbound.arrivalDate,
+                    flights[i + 2].outbound.departureDate
+                  )}
+                </div>
+              </div>
+            ) : (
               <div className={css.delete}>
-                <button title="Delete flight" onClick={() => deleteFlight(i)}>
+                <button
+                  title="Delete flight"
+                  onClick={() => deleteFlight(i + 1)}
+                >
                   {"❌"}
                 </button>
               </div>
-            ) : null}
-            {i > 0 ? <FlightTooltip flight={f} /> : null}
+            )}
           </div>
 
-          {i > 0 && i + 1 < flights.length ? (
-            <div className={css.duration}>
-              {durationInCity(
-                f.outbound.arrivalDate,
-                flights[i + 1].outbound.departureDate
-              )}
-            </div>
-          ) : null}
-        </>
+          <FlightTooltip flight={f} />
+        </div>
       ))}
     </div>
   );
