@@ -21,12 +21,6 @@
     .tooltip {
       display: block;
     }
-    .delete {
-      display: block;
-    }
-    .airportName {
-      color: var(--color-primary-highlight);
-    }
   }
 }
 
@@ -47,18 +41,25 @@
 
 .delete {
   position: relative;
-  margin-left: 5px;
+  display: flex;
+  align-items: center;
   button {
     padding: 0;
     background: transparent;
+    display: block;
+    text-align: center;
     font-size: 12px;
     border: 0;
     cursor: pointer;
+    fill: var(--color-dark-faded);
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+    &:hover {
+      fill: #f00;
+    }
   }
-}
-
-.timeline:hover .delete {
-  display: block;
 }
 
 .duration {
@@ -97,6 +98,9 @@
 
 .flightIcon {
   margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  fill: var(--color-primary);
 }
 
 .airportCode {
@@ -118,4 +122,7 @@
 
 .durationIcon {
   margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  fill: #fff;
 }

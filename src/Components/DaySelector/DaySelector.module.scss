@@ -61,4 +61,10 @@
   &:hover {
     background-color: var(--color-primary-highlight);
   }
+
+  svg {
+    fill: var(--color-dark);
+    width: 20px;
+    height: 20px;
+  }
 }

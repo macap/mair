@@ -2,6 +2,9 @@ import { format, add, setHours, setMinutes, isEqual } from "date-fns";
 import cx from "classnames";
 import css from "./DaySelector.module.scss";
 
+import ChevronLeftIcon from "../../assets/icons/angle-left.svg?react";
+import ChevronRightIcon from "../../assets/icons/angle-right.svg?react";
+
 // TODO: U test visibleOffset + displayDates
 
 export function useDaySelector(arrivalDate, dayOffset = 0) {
@@ -30,7 +33,7 @@ function DaySelector({ arrivalDate, currentDate, dayOffset, setDayOffset }) {
         title="Shorten your stay here by 1 day"
         className={css.button}
       >
-        ◀︎
+        <ChevronLeftIcon />
       </button>
       {dayOffset < 4 && (
         <div
@@ -63,7 +66,7 @@ function DaySelector({ arrivalDate, currentDate, dayOffset, setDayOffset }) {
         title="Stay here for 1 more day "
         className={css.button}
       >
-        ▶︎
+        <ChevronRightIcon />
       </button>
     </div>
   );

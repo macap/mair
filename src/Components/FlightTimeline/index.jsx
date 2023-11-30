@@ -6,6 +6,11 @@ import {
   format,
 } from "date-fns";
 import cx from "classnames";
+
+import PlaneIcon from "../../assets/icons/plane.svg?react";
+import ClockIcon from "../../assets/icons/clock.svg?react";
+import TrashIcon from "../../assets/icons/xmark.svg?react";
+
 import css from "./FlightTimeline.module.scss";
 
 const mapData = (f) => ({
@@ -36,8 +41,6 @@ function FlightTooltip({ flight: f }) {
   );
 }
 
-// TODO: cleanup:
-
 function FlightTimeline({ flights, deleteFlight }) {
   if (!flights.length) return null;
   if (flights.length === 1) {
@@ -65,11 +68,7 @@ function FlightTimeline({ flights, deleteFlight }) {
           </div>
           <div className={css.vertWrapper}>
             <div className={cx(css.box, css.flight)}>
-              <div className={css.flightIcon}>
-                <svg width="20" height="20">
-                  <rect width="20" height="20" style={{ fill: "#ffc300" }} />
-                </svg>
-              </div>
+              <PlaneIcon className={css.flightIcon} />
               <div>
                 <div className={css.vertWrapper}>
                   <div className={css.flightTime}>
@@ -91,11 +90,8 @@ function FlightTimeline({ flights, deleteFlight }) {
             </div>
             {i + 2 < flights.length ? (
               <div className={cx(css.box, css.duration)}>
-                <div className={css.durationIcon}>
-                  <svg width="20" height="20">
-                    <rect width="20" height="20" style={{ fill: "#fff" }} />
-                  </svg>
-                </div>
+                <ClockIcon className={css.durationIcon} />
+
                 <div>
                   {durationInCity(
                     f.outbound.arrivalDate,
@@ -109,7 +105,7 @@ function FlightTimeline({ flights, deleteFlight }) {
                   title="Delete flight"
                   onClick={() => deleteFlight(i + 1)}
                 >
-                  {"❌"}
+                  <TrashIcon />
                 </button>
               </div>
             )}
