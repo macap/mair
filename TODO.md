@@ -13,6 +13,7 @@
 
 - [x] NaN on total sum
 - [] Validate the app using other locale settings (TZ: UTC | GMT +3)
+- [] content shift on each flight load
 
 ### cleanup
 
@@ -24,6 +25,7 @@
 - [] redux
 - [] rwd
 - [] icons as svg sprites https://benadam.me/thoughts/react-svg-sprites/
+- [] json data rendered: 114KB(airport)+133KB(map) in bundle :/
 
 ### improvements
 
@@ -39,6 +41,7 @@
 - [] sort retults
 - [] if its first flight you can change arrival day back
 - [] reset +days on flight removal
+- [] save trip and/or branch it
 
 ### map
 
