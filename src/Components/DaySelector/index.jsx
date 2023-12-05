@@ -53,6 +53,7 @@ function DaySelector({ arrivalDate, currentDate, dayOffset, setDayOffset }) {
           className={cx(css.dateItem, {
             [css.dateItemActive]: isEqual(date, currentDate),
           })}
+          key={date.toJSON()}
         >
           <div className={css.dateDiff}>+ {visibleOffset[i]} days</div>
           <div className={css.date}>{format(date, "dd MMM")}</div>
