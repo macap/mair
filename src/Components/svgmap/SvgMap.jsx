@@ -44,3 +44,7 @@ export class SvgMap extends Component {
     );
   }
 }
+
+SvgMap.defaultProps = {
+  selectedCountries: [],
+};

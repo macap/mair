@@ -24,11 +24,12 @@
 - [ ] visual regression testing (screenshot comprasion)
   - https://github.com/americanexpress/jest-image-snapshot
   - or per component: https://github.com/lost-pixel/lost-pixel + ladle/storybook?
-- [] redux
+- [x] redux
 - [] rwd
 - [] icons as svg sprites https://benadam.me/thoughts/react-svg-sprites/
 - [] json data rendered: 114KB(airport)+133KB(map) in bundle :/
 - [] replace react-query with rtk-query once redux is set
+- [] add uuid to selected flights
 
 ### improvements
 

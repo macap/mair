@@ -1,19 +1,18 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
+import { useSelector } from "react-redux";
 import { parseJSON, differenceInCalendarDays } from "date-fns";
 import SummaryComponent from "../Components/Summary";
 import FlightsModal from "./FlightsModal";
 import useCurrencyConverter from "../Hooks/useCurrencyConverter";
 
-function Summary({ flights }) {
+export function Summary({ flights }) {
   const [showModal, setShowModal] = useState(false);
   const totalPrice = useCurrencyConverter(
-    flights
-      .slice(1)
-      .map((e) => ({
-        value: e.summary.price.value,
-        currencyCode: e.summary.price.currencyCode,
-      }))
+    flights.slice(1).map((e) => ({
+      value: e.summary.price.value,
+      currencyCode: e.summary.price.currencyCode,
+    }))
   );
 
   if (flights.length < 2) return null;
@@ -66,4 +65,9 @@ function Summary({ flights }) {
   );
 }
 
-export default Summary;
+function ConnectedSummary() {
+  const flights = useSelector((state) => state.selectedFlights);
+  return <Summary flights={flights} />;
+}
+
+export default ConnectedSummary;

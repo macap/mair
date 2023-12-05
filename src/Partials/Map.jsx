@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { SvgMap, SvgMapLink, SvgMapMarker } from "../Components/svgmap";
 import airports from "../data/airports_data.json";
 
@@ -6,13 +7,14 @@ const airportIndex = airports.reduce((acc, a) => {
   return acc;
 }, {});
 
-function Map({ flights }) {
+function FlightDots() {
+  const flights = useSelector((state) => state.selectedFlights);
   const mapFlights = flights.map(
     (f) => airportIndex[f.outbound.arrivalAirport.iataCode]
   );
 
   return (
-    <SvgMap selectedCountries={[]}>
+    <>
       {mapFlights.map((a, i) => (
         <>
           <SvgMapMarker latlng={`${a.latitude},${a.longitude}`} name={a.name} />
@@ -28,6 +30,14 @@ function Map({ flights }) {
           ) : null}
         </>
       ))}
+    </>
+  );
+}
+
+function Map() {
+  return (
+    <SvgMap>
+      <FlightDots />
     </SvgMap>
   );
 }

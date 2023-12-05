@@ -6,6 +6,9 @@ import {
   format,
 } from "date-fns";
 import cx from "classnames";
+import { useSelector, useDispatch } from "react-redux";
+
+import { removeFlight } from "../../store/selectedFlights";
 
 import PlaneIcon from "../../assets/icons/plane.svg?react";
 import ClockIcon from "../../assets/icons/clock.svg?react";
@@ -41,7 +44,7 @@ function FlightTooltip({ flight: f }) {
   );
 }
 
-function FlightTimeline({ flights, deleteFlight }) {
+export function FlightTimeline({ flights, deleteFlight }) {
   if (!flights.length) return null;
   if (flights.length === 1) {
     // only departure city set:
@@ -118,4 +121,15 @@ function FlightTimeline({ flights, deleteFlight }) {
   );
 }
 
-export default FlightTimeline;
+function ConnectedFlightTimeline() {
+  const flights = useSelector((state) => state.selectedFlights);
+  const dispatch = useDispatch();
+
+  const deleteFlight = (index) => {
+    dispatch(removeFlight(index));
+  };
+
+  return <FlightTimeline flights={flights} deleteFlight={deleteFlight} />;
+}
+
+export default ConnectedFlightTimeline;

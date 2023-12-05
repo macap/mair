@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { parseJSON, add, format, setHours, setMinutes } from "date-fns";
 import { useQuery } from "@tanstack/react-query";
+import { useSelector, useDispatch } from "react-redux";
+import { addFlight } from "../store/selectedFlights";
 import { getOneWayFares } from "../api/ryanair";
 import FlightList from "./FlightList";
 import DaySelector from "../Components/DaySelector";
 import DepartureHeader from "../Components/DepartureHeader";
 
-function FlightSelect({ date, origin, addFlight }) {
+export function FlightSelect({ date, origin, addFlight }) {
   const [dayOffset, setDayOffset] = useState(0);
   const parsedDate = parseJSON(date);
 
@@ -61,4 +63,25 @@ function FlightSelect({ date, origin, addFlight }) {
   );
 }
 
-export default FlightSelect;
+function ConnectedFlightSelect() {
+  const flights = useSelector((state) => state.selectedFlights);
+  const dispatch = useDispatch();
+
+  const addFlight2 = (flight) => {
+    dispatch(addFlight(flight));
+  };
+
+  const lastFlight = flights[flights.length - 1];
+  const departureDate = lastFlight.outbound.arrivalDate;
+  const departureAirport = lastFlight.outbound.arrivalAirport;
+
+  return (
+    <FlightSelect
+      date={departureDate}
+      origin={departureAirport}
+      addFlight={addFlight2}
+    />
+  );
+}
+
+export default ConnectedFlightSelect;
