@@ -12,11 +12,12 @@
 
 import { render, screen, fireEvent, getByText } from "@testing-library/react";
 
-import App from "../../src/App";
+import { App } from "../../src/App";
+import { renderWithProviders } from "../setup";
 
 describe("Landing page", () => {
   it("renders main form and shows main area after submitting the form", () => {
-    render(<App />);
+    renderWithProviders(<App />);
 
     // find form elements:
     const originSelect = screen.getByLabelText("Origin");

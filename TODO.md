@@ -13,6 +13,8 @@
 
 - [x] NaN on total sum
 - [] Validate the app using other locale settings (TZ: UTC | GMT +3)
+  https://www.npmjs.com/package/timezoned-date
+  https://www.npmjs.com/package/mockdate
 - [] content shift on each flight load
 
 ### cleanup
@@ -26,6 +28,7 @@
 - [] rwd
 - [] icons as svg sprites https://benadam.me/thoughts/react-svg-sprites/
 - [] json data rendered: 114KB(airport)+133KB(map) in bundle :/
+- [] replace react-query with rtk-query once redux is set
 
 ### improvements
 

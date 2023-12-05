@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addFlight, removeFlight } from "../store/selectedFlights";
 import StartForm from "./Start";
 import FlightSelect from "../Partials/FlightSelect";
 import Summary from "../Partials/Summary";
@@ -7,18 +9,22 @@ import Layout from "../Components/Layout";
 import FlightTimeline from "../Components/FlightTimeline";
 
 export default function App() {
-  const [flights, setFlights] = useState([]);
+  // const [flights, setFlights] = useState([]);
+  const flights = useSelector((state) => state.selectedFlights);
+  const dispatch = useDispatch();
 
-  const addFlight = (flight) => {
-    setFlights([...flights, flight]);
+  const addFlight2 = (flight) => {
+    dispatch(addFlight(flight));
+    // setFlights([...flights, flight]);
   };
 
   const deleteFlight = (index) => {
-    setFlights((f) => f.filter((_, i) => i !== index));
+    dispatch(removeFlight(index));
+    // setFlights((f) => f.filter((_, i) => i !== index));
   };
 
   if (flights.length === 0) {
-    return <StartForm addFlight={addFlight} />;
+    return <StartForm addFlight={addFlight2} />;
   }
 
   const lastFlight = flights[flights.length - 1];
@@ -39,7 +45,7 @@ export default function App() {
               <FlightSelect
                 date={departureDate}
                 origin={departureAirport}
-                addFlight={addFlight}
+                addFlight={addFlight2}
               />
             </div>
           </Layout.Aside>

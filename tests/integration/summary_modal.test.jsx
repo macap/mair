@@ -22,7 +22,8 @@ import {
   waitFor,
 } from "@testing-library/react";
 
-import App from "../../src/App";
+import { App } from "../../src/App";
+import { renderWithProviders } from "../setup";
 
 const getArea = {
   timeline: () => screen.getByTestId("area-timeline"),
@@ -34,7 +35,7 @@ const getArea = {
 
 describe("Summary modal", () => {
   beforeEach(async () => {
-    render(<App />);
+    renderWithProviders(<App />);
     // submit origin form:
     // select WAW as aiport and 10.11.2024 as date:
     fireEvent.change(screen.getByLabelText("Origin"), {

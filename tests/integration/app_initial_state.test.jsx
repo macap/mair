@@ -14,7 +14,8 @@
 
 import { render, screen, fireEvent, getByText } from "@testing-library/react";
 
-import App from "../../src/App";
+import { App } from "../../src/App";
+import { renderWithProviders } from "../setup";
 
 // screen.debug();
 
@@ -25,7 +26,8 @@ const getArea = {
 
 describe("Main page initial state", () => {
   beforeEach(() => {
-    render(<App />);
+    // render(<App />);
+    renderWithProviders(<App />, { preloadedState: { selectedFlights: [] } });
     // submit origin form:
     // select WAW as aiport and 10.11.2024 as date:
     fireEvent.change(screen.getByLabelText("Origin"), {
