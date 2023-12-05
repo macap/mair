@@ -22,10 +22,17 @@ $space: $footerHeight + $headerHeight;
 
 .row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
   & > * {
-    height: calc(100vh - $space);
-    overflow-y: scroll;
+    @media (min-width: 768px) {
+      height: calc(100vh - $space);
+      overflow-y: scroll;
+    }
   }
 }
 
@@ -37,6 +44,10 @@ $space: $footerHeight + $headerHeight;
 }
 
 .aside {
+  @media (min-width: 768px) {
+    max-width: 800px;
+    width: 800px;
+  }
 }
 
 .content {
