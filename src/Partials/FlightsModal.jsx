@@ -14,7 +14,7 @@ function FlightsModal({ flights, onClose }) {
           const duration = "??h ??min";
 
           return (
-            <div style={{ display: "flex", alignItems: "center" }}>
+            <div style={{ display: "flex", alignItems: "center" }} key={el.id}>
               <div style={{ width: "600px" }}>
                 <FlightListElement
                   departureDate={departureDate}
