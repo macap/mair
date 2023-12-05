@@ -8,7 +8,7 @@ import {
 import cx from "classnames";
 import { useSelector, useDispatch } from "react-redux";
 
-import { removeFlight } from "../../store/selectedFlights";
+import { removeFlight, clearFlights } from "../../store/selectedFlights";
 
 import PlaneIcon from "../../assets/icons/plane.svg?react";
 import ClockIcon from "../../assets/icons/clock.svg?react";
@@ -44,14 +44,20 @@ function FlightTooltip({ flight: f }) {
   );
 }
 
-export function FlightTimeline({ flights, deleteFlight }) {
+export function FlightTimeline() {
+  const flights = useSelector((state) => state.selectedFlights);
+  const dispatch = useDispatch();
+
   if (!flights.length) return null;
   if (flights.length === 1) {
     // only departure city set:
     return (
       <div className={css.timeline}>
         <div className={css.delete}>
-          <button title="Delete flight" onClick={() => deleteFlight(0)}>
+          <button
+            title="Delete flight"
+            onClick={() => dispatch(clearFlights())}
+          >
             {"back"}
           </button>
         </div>
@@ -62,10 +68,7 @@ export function FlightTimeline({ flights, deleteFlight }) {
   return (
     <div className={css.timeline}>
       {flights.slice(1).map((f, i) => (
-        <div
-          className={css.element}
-          key={`f${f.outbound.departureAirport.iataCode}-${f.outbound.arrivalAirport.iataCode}`}
-        >
+        <div className={css.element} key={f.id}>
           <div className={css.date}>
             {format(parseJSON(f.outbound.departureDate), "d MMM, EEEEEE")}
           </div>
@@ -106,7 +109,7 @@ export function FlightTimeline({ flights, deleteFlight }) {
               <div className={css.delete}>
                 <button
                   title="Delete flight"
-                  onClick={() => deleteFlight(i + 1)}
+                  onClick={() => dispatch(removeFlight(f.id))}
                 >
                   <TrashIcon />
                 </button>
@@ -121,15 +124,4 @@ export function FlightTimeline({ flights, deleteFlight }) {
   );
 }
 
-function ConnectedFlightTimeline() {
-  const flights = useSelector((state) => state.selectedFlights);
-  const dispatch = useDispatch();
-
-  const deleteFlight = (index) => {
-    dispatch(removeFlight(index));
-  };
-
-  return <FlightTimeline flights={flights} deleteFlight={deleteFlight} />;
-}
-
-export default ConnectedFlightTimeline;
+export default FlightTimeline;

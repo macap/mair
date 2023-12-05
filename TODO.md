@@ -29,7 +29,7 @@
 - [] icons as svg sprites https://benadam.me/thoughts/react-svg-sprites/
 - [] json data rendered: 114KB(airport)+133KB(map) in bundle :/
 - [] replace react-query with rtk-query once redux is set
-- [] add uuid to selected flights
+- [x] add uuid to selected flights
 
 ### improvements
 
