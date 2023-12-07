@@ -47,6 +47,7 @@ function DepartureForm({ onSubmit }) {
         className={cx(css.button, css.rounded_right)}
         disabled={!departureDate || !departureAirport}
         onClick={() => onSubmit(departureAirport, departureDate)}
+        data-umami-event="Submit departure form"
         data-testid="submit-departure-form"
       >
         Plan your journey
