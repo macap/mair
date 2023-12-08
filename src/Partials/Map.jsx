@@ -1,45 +1,15 @@
-import { useSelector } from "react-redux";
-import { SvgMap, SvgMapLink, SvgMapMarker } from "../Components/svgmap";
-import airports from "../data/airports_data.json";
+import { lazy, Suspense } from "react";
 
-const airportIndex = airports.reduce((acc, a) => {
-  acc[a.code] = { ...a.coordinates, code: a.code, name: a.name };
-  return acc;
-}, {});
-
-function FlightDots() {
-  const flights = useSelector((state) => state.selectedFlights);
-  const mapFlights = flights.map((f) => ({
-    ...airportIndex[f.outbound.arrivalAirport.iataCode],
-    id: f.id,
-  }));
-
-  return (
-    <>
-      {mapFlights.map((a, i) => (
-        <g key={a.id}>
-          <SvgMapMarker latlng={`${a.latitude},${a.longitude}`} name={a.name} />
-          {i + 1 < flights.length ? (
-            <SvgMapLink
-              from={{ lat: a.latitude, lng: a.longitude }}
-              to={{
-                lat: mapFlights[i + 1].latitude,
-                lng: mapFlights[i + 1].longitude,
-              }}
-              color="#ffc300ff"
-            />
-          ) : null}
-        </g>
-      ))}
-    </>
-  );
-}
+const SvgMap = lazy(() => import("../Components/svgmap/SvgMap.jsx"));
+const FlightDots = lazy(() => import("../Components/MapFlightDots/index.jsx"));
 
 function Map() {
   return (
-    <SvgMap>
-      <FlightDots />
-    </SvgMap>
+    <Suspense fallback={<div>Loading...</div>}>
+      <SvgMap>
+        <FlightDots />
+      </SvgMap>
+    </Suspense>
   );
 }
 

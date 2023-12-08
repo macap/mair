@@ -3,7 +3,7 @@ import { useCombobox } from "downshift";
 import cx from "classnames";
 
 import { getMinAirports } from "../../api/airports";
-import useDebounce from "../../hooks/useDebounce";
+import useDebounce from "../../Hooks/useDebounce";
 import css from "./AirportSelect.module.scss";
 
 const airportsList = [

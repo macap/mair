@@ -45,6 +45,8 @@ export class SvgMap extends Component {
   }
 }
 
+export default SvgMap;
+
 SvgMap.defaultProps = {
   selectedCountries: [],
 };
