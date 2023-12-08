@@ -39,9 +39,11 @@ describe("Flight selection", () => {
     renderWithProviders(<App />);
     // submit origin form:
     // select WAW as aiport and 10.11.2024 as date:
-    fireEvent.change(screen.getByLabelText("Origin"), {
-      target: { value: "WAW" },
-    });
+    const originSelect = screen.getByPlaceholderText("Departure airport");
+    fireEvent.focus(originSelect);
+    fireEvent.keyDown(originSelect, { key: "ArrowDown", code: 40 });
+    fireEvent.keyDown(originSelect, { key: "Enter", code: 13 });
+
     fireEvent.change(screen.getByLabelText("Departure date"), {
       target: { value: "2024-11-10" },
     });

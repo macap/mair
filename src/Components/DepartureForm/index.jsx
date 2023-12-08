@@ -1,14 +1,9 @@
 import { useState } from "react";
 import cx from "classnames";
-import css from "./DepartureForm.module.scss";
-
-import airports from "../../data/airports.json";
 import { format } from "date-fns";
 
-const airportsList = Object.keys(airports).map((key) => ({
-  value: key,
-  label: airports[key],
-}));
+import css from "./DepartureForm.module.scss";
+import AirportSelect from "../AirportSelect";
 
 function DepartureForm({ onSubmit }) {
   const [departureDate, setDepartureDate] = useState(
@@ -19,19 +14,10 @@ function DepartureForm({ onSubmit }) {
   return (
     <div className={css.form}>
       <div className={css.formField}>
-        <label htmlFor="origin">Origin</label>
-        <select
-          id="origin"
+        <AirportSelect
           value={departureAirport}
           onChange={(e) => setDepartureAirport(e.target.value)}
-          className={cx(css.select, css.input__rounded_left)}
-        >
-          {airportsList.map((airport) => (
-            <option key={airport.value} value={airport.value}>
-              {airport.label}
-            </option>
-          ))}
-        </select>
+        />
       </div>
       <div className={css.formField}>
         <label htmlFor="date">Departure date</label>
