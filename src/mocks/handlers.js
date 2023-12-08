@@ -2,18 +2,14 @@ import { http, HttpResponse } from "msw";
 import { format, add } from "date-fns";
 import data from "./data.json";
 import airports from "./airports.json";
-import currA from "./currA.json";
-import currB from "./currB.json";
+import curr from "./curr.json";
 
 export const handlers = [
   http.get("/data", ({ request, params, cookies }) => {
     return HttpResponse.json(data);
   }),
-  http.get("https://api.nbp.pl/api/exchangerates/tables/A?format=json", () =>
-    HttpResponse.json(currA)
-  ),
-  http.get("https://api.nbp.pl/api/exchangerates/tables/B?format=json", () =>
-    HttpResponse.json(currB)
+  http.get("https://round-voice-fc72.maciek.workers.dev/exchangerates", () =>
+    HttpResponse.json(curr)
   ),
   http.get(
     "https://www.ryanair.com/api/farfnd/v4/oneWayFares",
