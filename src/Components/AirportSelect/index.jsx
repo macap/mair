@@ -9,6 +9,9 @@ import css from "./AirportSelect.module.scss";
 const airportsList = [
   { value: "WAW", label: "Warsaw Chopin" },
   { value: "WMI", label: "Warsaw Modlin" },
+  { value: "KRK", label: "Krakow" },
+  { value: "STN", label: "London Stansted" },
+  { value: "BER", label: "Berlin Brandenburg" },
 ];
 
 function AirportSelect({ value, onChange }) {
