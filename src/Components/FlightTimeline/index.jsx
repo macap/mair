@@ -28,6 +28,12 @@ function durationInCity(arrivalString, departureString) {
   return formatDistanceStrict(arr, dep);
 }
 
+function getTimeFromDateTimeString(input) {
+  const [_, time] = input.split("T");
+  const [hours, minutes, seconds] = time.split(":");
+  return `${hours}:${minutes}`;
+}
+
 function FlightTooltip({ flight: f }) {
   return (
     <div className={css.tooltip}>
@@ -78,7 +84,7 @@ export function FlightTimeline() {
               <div>
                 <div className={css.vertWrapper}>
                   <div className={css.flightTime}>
-                    {format(parseJSON(f.outbound.departureDate), "HH:MM")}
+                    {getTimeFromDateTimeString(f.outbound.departureDate)}
                   </div>
                   <div className={css.airportCode}>
                     {f.outbound.departureAirport.iataCode}
@@ -86,7 +92,7 @@ export function FlightTimeline() {
                 </div>
                 <div className={css.vertWrapper}>
                   <div className={css.flightTime}>
-                    {format(parseJSON(f.outbound.arrivalDate), "HH:MM")}
+                    {getTimeFromDateTimeString(f.outbound.arrivalDate)}
                   </div>
                   <div className={css.airportCode}>
                     {f.outbound.arrivalAirport.iataCode}
